@@ -1,0 +1,27 @@
+.blue{
+    width: 1000px;
+    height: 120px;
+    background-color: blue;
+}
+.aqua{
+    background-color: aqua;
+    width: 300px
+}
+.giua{
+    height: 70%;
+    width: 70%;
+    border-left: 70px;
+    
+}
+.background{
+    position: fixed;
+}
+.Logo{
+    max-width: 100%;
+    height:auto
+    
+}
+.body{
+    min-height: 800px;
+   
+}
