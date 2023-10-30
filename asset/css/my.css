@@ -1,27 +1,111 @@
+    /* ------------------------ header css ------------------------ */
+
+.background{
+    background: url("asset/images/1.png") no-repeat left top;
+    max-width: 100%;
+}
+
+
+.container{
+    max-width: 400px;
+    background-image: linear-gradient(0,8,51,0.9);
+    min-width: 100%;
+}
+
+form{
+    max-width: 500px;
+    height: 55px;
+    margin-top: 10px;
+    margin-left: 424px;
+    margin-right: 400px;
+    margin-bottom: 100px;
+    border-radius: 25px;
+    background-image: url(./asset/images/1.png);
+    border: 2px solid #0d0c1b;
+    justify-content: center;
+    align-items: center;
+    position: space-between;
+    box-sizing: border-box;
+    font-family: 'Poppins, sans-serif ';
+}
+
+.search-bar-input{
+    height: 25px;
+    width: 350px;
+    padding: 10px 10px;
+    font-size: 25px;
+    color: #0d0c1b;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: rgb(255, 255, 255);
+    outline: 2px;
+    flex: 1;
+    border: 0;
+}
+
+::placeholder{
+    color: #0d0c1b;
+}
+
+.search-bar-button img{
+    width: 25px;
+}
+
+.search-bar-button{
+    margin-top: 5px;
+    margin-left: 40px;
+    border: 0;
+    border-radius: 28px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 40px;
+    height: 40px;
+    background: black;
+    cursor: pointer;
+}
+    /* --------------------- end header css ------------------------ */
+
+    /* ------------------------- body css ------------------------- */
+
 .blue{
     width: 1000px;
     height: 120px;
     background-color: blue;
 }
+
 .aqua{
     background-color: aqua;
     width: 300px
 }
-.giua{
+
+.body{
+    min-height: 800px;
+   
+}
+
+.middle{
     height: 70%;
     width: 70%;
     border-left: 70px;
     
 }
-.background{
+.background1{
     position: fixed;
 }
-.Logo{
+
+.logo{
+    margin-left: 100px;
     max-width: 100%;
     height:auto
     
 }
-.body{
-    min-height: 800px;
-   
-}
+    
+    /* ----------------------- end body css ----------------------- */
+        
+    /* ---------------------- footer css ------------------------ */
+
+
+
+
+    /* --------------------- end footer css --------------------- */
