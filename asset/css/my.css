@@ -1,10 +1,8 @@
     /* ------------------------ header css ------------------------ */
-
-.background{
-    background: url("asset/images/1.png") no-repeat left top;
-    max-width: 100%;
+.header{
+   outline: none;
+   display: block;
 }
-
 
 .container{
     max-width: 400px;
@@ -13,18 +11,11 @@
 }
 
 form{
-    max-width: 500px;
-    height: 55px;
-    margin-top: 10px;
-    margin-left: 424px;
-    margin-right: 400px;
-    margin-bottom: 100px;
+    max-width: 600px;
+    height: 53px;
+    margin: -94px 380px 100px 390px;
     border-radius: 25px;
-    background-image: url(./asset/images/1.png);
     border: 2px solid #0d0c1b;
-    justify-content: center;
-    align-items: center;
-    position: space-between;
     box-sizing: border-box;
     font-family: 'Poppins, sans-serif ';
 }
@@ -35,6 +26,7 @@ form{
     padding: 10px 10px;
     font-size: 25px;
     color: #0d0c1b;
+    align-content: left;
     justify-content: center;
     margin-left: 20px;
     margin-right: 20px;
@@ -54,7 +46,7 @@ form{
 
 .search-bar-button{
     margin-top: 5px;
-    margin-left: 40px;
+    margin-left: 136px;
     border: 0;
     border-radius: 28px;
     border-bottom-right-radius: 30px;
