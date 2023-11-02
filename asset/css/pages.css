@@ -1,0 +1,115 @@
+    /* ------------------------ header css ------------------------ */
+
+/* .header_main{
+
+}*/
+
+/* *{
+    margin: 0px ;
+
+}  */
+
+html{
+    margin: none;
+    outline: none;
+}
+
+.header_main{
+    margin-right: 50px;
+}
+
+.header{
+    outline: none;
+    margin-top: -20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.container{
+    height: 90px;
+}
+
+.searching_bar > ul > li{
+    display: inline;
+    padding: 5px 15px;
+
+}
+.searching_bar > ul > li > a{
+    margin-top: 100px;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    display: inline;
+}
+
+.header_action{
+    margin: 10px 0px 0px 1220px ;
+}
+
+.header_action_searching{
+    margin-left: -47px;
+    margin-top: 50px;
+    width: 25px;
+    height: 25px;
+}
+
+.header_action_account{
+    margin-left: -27px;
+    margin-top: 12px;
+    width: 24px;
+    height: 25px;
+}
+
+.header_action_shoppingcart{
+    margin: -20px 0px 0px -23px;
+    width: 38px;
+    height: 38px;
+}
+
+
+    /* --------------------- end header css ------------------------ */
+
+    /* ------------------------- body css ------------------------- */
+
+.blue{
+    width: 1000px;
+    height: 120px;
+    background-color: blue;
+}
+
+.aqua{
+    background-color: aqua;
+    width: 300px
+}
+
+.body{
+    min-height: 800px;
+   
+}
+
+.middle{
+    height: 70%;
+    width: 70%;
+    border-left: 70px;
+    
+}
+.background1{
+    position: fixed;
+}
+
+.logo{
+    margin-left: 100px;
+    max-width: 100%;
+    height:auto
+    
+}
+    
+    /* ----------------------- end body css ----------------------- */
+        
+    /* ---------------------- footer css ------------------------ */
+
+
+
+
+    /* --------------------- end footer css --------------------- */
