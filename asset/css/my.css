@@ -72,38 +72,105 @@ html{
 
     /* ------------------------- body css ------------------------- */
 
-.blue{
-    width: 1000px;
-    height: 120px;
-    background-color: blue;
-}
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+    *{
+       padding: 0;
+       margin: 0;
+    }   
+    body{
+       font-family: 'Open Sans', sans-serif;
+       font-size: 14px;
+       line-height: 1.15;
+       color: #111
+    }
+    #wrapper{
+       max-width: 1000px;
+       margin: 0px auto;
+    }
+    .headline{
+       text-align: center;
+       margin: 40px 0px;
+    }
+    h3{
+       font-size: 18px;
+       color: #111;
+       padding: 10px 20px;
+       text-transform: uppercase;
+       border: 1px solid #bebebe;
+       display: inline-block;
+       color: #555;
+       font-weight: 600;
+    }
+    ul.products{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       list-style: none;
+       
+    }
+    ul.products li{
+       flex-basis: 25%;
+       padding-left: 15px;
+       padding-right: 15px;
+       box-sizing: border-box;
+       
+       
+    }
+    ul.products li img{
+       max-width: 100%;
+       height: auto;
 
-.aqua{
-    background-color: aqua;
-    width: 300px
-}
+    }
+    ul.products li .product-top{
+       position: relative;
+       overflow: hidden;
+    }
+     
+    ul.products li .product-top .product-thumb{
+       display: block;
 
-.body{
-    min-height: 800px;
-   
-}
+    }
+    ul.products li:hover .product-top .product-thumb img{
+       filter: opacity(80%);
+    }
+    ul.products li .product-top .product-thumb img{
+       display: block;
+    }
+    ul.products li .product-top a.buynow{
+       text-decoration: none;
+       text-transform: uppercase;
+       text-align: center;
+       display: block;
+       background-color: aquamarine;
+       color: #fff;
+       padding: 10px 0px;
+       position: absolute;
+       width: 100%;  
+       bottom: -36px;
+       transition: 0.25s ease-in-out;
+       opacity: 0.85;
+    }
+    ul.products li:hover a.buynow{
+       bottom: 0px;
+    }
+    ul.products li .product-info{
+       padding: 10px 0px;
+    }
+    ul.products li .product-info a{
+       display: block;
+       text-decoration: none;
 
-.middle{
-    height: 70%;
-    width: 70%;
-    border-left: 70px;
-    
-}
-.background1{
-    position: fixed;
-}
+    }
+    ul.products li .product-info a.product-name{
+       color:#334862;
+       padding: 3px 0px;
 
-.logo{
-    margin-left: 100px;
-    max-width: 100%;
-    height:auto
-    
-}
+    }
+    ul.products li .product-info .product-price{
+       color: #111;
+       padding: 2px 0px;
+       font-weight: 600;
+    }
     
     /* ----------------------- end body css ----------------------- */
         
