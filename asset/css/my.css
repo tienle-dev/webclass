@@ -1,72 +1,110 @@
     /* ------------------------ header css ------------------------ */
 
-/* .header_main{
-
-}*/
-
-/* *{
-    margin: 0px ;
-
-}  */
-
-html{
-    margin: none;
-    outline: none;
+header{
+   height: 100px;
 }
 
-.header_main{
-    margin-right: 50px;
+.container-fluid{
+   height: 80px;
 }
 
-.header{
-    outline: none;
-    margin-top: -20px;
-    margin-left: 20px;
-    margin-right: 20px;
+.section-header{
+   margin-left: 80px;
 }
 
+.header-container{
+   padding: 10px 0;
+}
+
+.form-inputs{
+   position:relative;
+}
+
+.form-inputs .form-control{
+   height:45px; 
+   margin-left: 260px;
+   margin-top: 5px;
+}
+
+.form-inputs .form-control:focus{
+   box-shadow:none;
+   border: 1px solid #000;
+}
+
+.form-inputs i{
+   position:absolute;
+   right:10px;
+   top:15px;
+}
+
+.qty{
+   font-size:12px;
+}
 
 .container{
-    height: 90px;
+   display: block;
+   height: 50px;
+   margin-top: -20px;
+   margin-bottom: 5px;
+   margin-left: 50px;
+   padding: 5px;
+   box-shadow: 0 3px 5px rgb(190, 190, 190);
+   background-color: beige;
 }
 
-.searching_bar > ul > li{
-    display: inline;
-    padding: 5px 15px;
-
-}
-.searching_bar > ul > li > a{
-    margin-top: 100px;
-    position: relative;
-    text-decoration: none;
-    color: black;
-    display: inline;
+.searching-bar{
+   height: 30px;
 }
 
-.header_action{
-    margin: 10px 0px 0px 1220px ;
+.content-icon-cart{
+   margin-top: -61px;
+   margin-right: 50px;
+   text-align: center;
+   line-height: 35px;
+   display: inline-block;
+   border: 1px solid #f68930;
+   height: 40px;
+   width: 40px;
+   border-radius: 15px;
+   float: right;
+   background: #fff;
 }
 
-.header_action_searching{
-    margin-left: -47px;
-    margin-top: 50px;
-    width: 25px;
-    height: 25px;
+.content-icon-login{
+   margin-right: -315px;
+   margin-top: -45px;
+   text-align: center;
+   line-height: 35px;
+   display: inline-block;
+   border: 1px solid #f68930;
+   height: 40px;
+   width: 40px;
+   border-radius: 15px;
+   float: right;
+   background: #fff;
 }
 
-.header_action_account{
-    margin-left: -27px;
-    margin-top: 12px;
-    width: 24px;
-    height: 25px;
+.login-icon{
+   position: relative;
 }
 
-.header_action_shoppingcart{
-    margin: -20px 0px 0px -23px;
-    width: 38px;
-    height: 38px;
+.searching-bar > ul > li{
+   display: inline-flex;
+   margin-top: 15px;
 }
 
+.searching-bar > ul > li > a{
+   text-decoration: none;
+   width: 200px;
+   text-align: center;
+   font-weight: bold;
+   color: black;
+   text-transform: uppercase;
+}
+
+.searching-bar > ul > li > a:hover{
+   color: orange;
+}
 
     /* --------------------- end header css ------------------------ */
 
