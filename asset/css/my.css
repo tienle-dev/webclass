@@ -241,6 +241,9 @@ color: white;
 background: #dd4b39;
 color: white;
 }
+.bottom{
+  padding-bottom: 0.5rem !important;
+}
 
 
     /* --------------------- end footer css --------------------- */
