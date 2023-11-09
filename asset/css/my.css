@@ -46,7 +46,6 @@ header{
    height: 50px;
    margin-top: -20px;
    margin-bottom: 5px;
-   margin-left: 50px;
    padding: 5px;
    box-shadow: 0 3px 5px rgb(190, 190, 190);
    background-color: beige;
@@ -54,38 +53,6 @@ header{
 
 .searching-bar{
    height: 30px;
-}
-
-.content-icon-cart{
-   margin-top: -61px;
-   margin-right: 50px;
-   text-align: center;
-   line-height: 35px;
-   display: inline-block;
-   border: 1px solid #f68930;
-   height: 40px;
-   width: 40px;
-   border-radius: 15px;
-   float: right;
-   background: #fff;
-}
-
-.content-icon-login{
-   margin-right: -315px;
-   margin-top: -45px;
-   text-align: center;
-   line-height: 35px;
-   display: inline-block;
-   border: 1px solid #f68930;
-   height: 40px;
-   width: 40px;
-   border-radius: 15px;
-   float: right;
-   background: #fff;
-}
-
-.login-icon{
-   position: relative;
 }
 
 .searching-bar > ul > li{
@@ -105,7 +72,6 @@ header{
 .searching-bar > ul > li > a:hover{
    color: orange;
 }
-
     /* --------------------- end header css ------------------------ */
 
     /* ------------------------- body css ------------------------- */
