@@ -86,7 +86,8 @@ header{
        font-family: 'Open Sans', sans-serif;
        font-size: 14px;
        line-height: 1.15;
-       color: #111
+       color: #111;
+       background-color: #f3f8ff;
     }
     #wrapper{
        max-width: 1000px;
@@ -96,16 +97,23 @@ header{
        text-align: center;
        margin: 40px 0px;
     }
+    h2{
+      padding-top: 2em;
+      font-weight: 600;
+      text-align: center;
+       
+    }
     h3{
        font-size: 18px;
        color: #111;
        padding: 10px 20px;
        text-transform: uppercase;
-       border: 1px solid #bebebe;
+       /*border: 1px solid #bebebe;*/
        display: inline-block;
        color: #555;
        font-weight: 600;
     }
+   
     ul.products{
        display: flex;
        flex-wrap: wrap;
@@ -113,13 +121,14 @@ header{
        list-style: none;
        
     }
+    
     ul.products li{
        flex-basis: 25%;
        padding-left: 15px;
        padding-right: 15px;
        box-sizing: border-box;
-       border: 1px solid #bebebe;
        
+      /*border: 1px solid #bebebe;*/
     }
     ul.products li img{
        max-width: 100%;
@@ -147,11 +156,11 @@ header{
        text-align: center;
        display: block;
        background-color: aquamarine;
-       color: black;
+       color: #fff;
        padding: 10px 0px;
        position: absolute;
        width: 100%;  
-       bottom: -36px;
+       bottom: -45px;
        transition: 0.25s ease-in-out;
        opacity: 0.85;
     }
@@ -168,13 +177,17 @@ header{
     }
     ul.products li .product-info a.product-name{
        color:#334862;
-       padding: 3px 0px;
+       padding: 5px 0px;
 
     }
     ul.products li .product-info .product-price{
        color: #111;
        padding: 2px 0px;
        font-weight: 600;
+    }
+    
+    .infomationfood{
+     text-align: center;
     }
     
     /* ----------------------- end body css ----------------------- */
