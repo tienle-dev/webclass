@@ -26,10 +26,8 @@
     <link rel="stylesheet" href="asset/css/my.css" type="text/css" />
     <title>petfood</title>
   </head>
-  <div> <img width="1260px" src="/asset/images/asd.webp"></div>
   <body>
-    <header>
-      <section class="main-header">
+      <div class="main-header">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-2 py-2">
@@ -39,7 +37,7 @@
                 alt="logo petfood"
               />
             </div>
-            <div class="col-md-5">
+            <div class="col-md-4">
               <div class="input-group mb-3">
                 <input
                   type="text"
@@ -63,7 +61,7 @@
                       </div>
                     </div>
                     <div class="col-9">
-                      Tư vấn hỗ trợ
+                      <span> Tư vấn hỗ trợ </span>
                       <br />
                       <strong class="sdt">0869900147</strong>
                     </div>
@@ -77,7 +75,7 @@
                       </div>
                     </div>
                     <div class="col-8">
-                      Xin chào
+                      <span>Đăng ký</span>
                       <br />
                       <strong class="login">Đăng nhập</strong>
                     </div>
@@ -85,116 +83,74 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
               <div class="row">
                 <div class="col">
-                  <a href="#" class="position-relative">
-                    <span class="fs-3 text-black my-3">
-                      <i
-                        class="fa-solid fa-cart-arrow-down"
-                        style="margin-left: 30px"
-                      ></i>
-                    </span>
-                    <span>
-                      <span
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                        style="margin-top: -10px; margin-left: 3px"
-                      >
-                        0
-                      </span>
-                    </span>
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="#" class="position-relative">
-                    <span class="fs-3 text-black my-3">
-                      <i
-                        class="fa-regular fa-heart"
-                        style="margin-left: -20px"
-                      ></i>
-                    </span>
-                    <span>
-                      <span
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                        style="margin-top: -10px; margin-left: 3px"
-                      >
-                        0
-                      </span>
-                    </span>
-                  </a>
+                  <div class="col-2">
+                    <div class="fs-3">
+                      <i class="fa-solid fa-shop"></i>
+                    </div>
+                  </div>
+                  <div class="col-8" style="margin-top: -32px; margin-left: 40px;">
+                    <span>Thời gian 8h00-21h30</span>
+                    <br />
+                    <strong class="sell-time">Mua hàng</strong>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="main-menu">
+      </div>
+      <div class="main-menu">
         <div class="row">
-          <div class="col-lg-3 text-black px-5 py-3 text-center">
-            <a class="nav-link" aria-current="page" href="#">
-              <span class="nav-title1"
-                ><i class="fa-solid fa-bars"></i> Danh mục sản phẩm</span
-              ></a
-            >
-          </div>
           <div class="col-lg-9">
             <nav class="navbar navbar-expand-lg text-center">
-              <div class="container-fluid">
-                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+              <div class="container">
                 <div
                   class="collapse navbar-collapse"
                   id="navbarSupportedContent"
-                >
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  >
+                  <div class="col-md-1"></div>
+                  <div class="navbar-nav me-auto mb-4 mb-lg-1">
                     <li class="nav-item">
                       <a class="nav-link" aria-current="page" href="index.html"
                         ><span class="nav-title">Trang chủ</span></a
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/pages/Dog Food.html"
+                      <a class="nav-link" href="asset/images/Dog Food.html"
                         ><span class="nav-title">Thức ăn cho chó</span></a
-                      >
-                    </li>
+                        >
+                      </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/pages/Cat Food.html"
-                        ><span class="nav-title">Thức ăn cho mèo</span></a
+                      <a class="nav-link" href="asset/images/Cat Food.html"
+                      ><span class="nav-title">Thức ăn cho mèo</span></a
                       >
                     </li>
                     <li class="nav-item dropdown">
                       <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        id="navbarDropdown"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
                       >
-                        <span class="nav-title">Sản phẩm khác </span>
-                      </a>
-                      <ul
-                        class="dropdown-menu"
-                        aria-labelledby="navbarDropdown"
-                      >
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Another action</a>
-                        </li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li>
-                          <a class="dropdown-item" href="#"
-                            >Something else here</a
+                      <span class="nav-title">Sản phẩm khác </span>
+                    </a>
+                    <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                    >
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                      >Something else here</a
                           >
                         </li>
                       </ul>
@@ -204,17 +160,50 @@
               </div>
             </nav>
           </div>
+          <div class="col-lg-3">
+            <div class="nav-icon">
+            <a href="#" class="position-relative">
+              <span class="fs-3 text-black my-3">
+                <i
+                class="fa-solid fa-cart-arrow-down"
+                style="margin-top: 15px; margin-left: 170px; width: 15px; height: 15px"
+                ></i>
+              </span>
+              <span>
+                <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="margin-top: -12px; margin-left: 11px"
+                >
+                  0
+                </span>
+              </span>
+            </a>
+              <a href="#" class="position-relative">
+                <span class="fs-3 text-black my-3">
+                  <i
+                    class="fa-regular fa-heart"
+                    style="margin-left: 25px"
+                  ></i>
+                </span>
+                <span>
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    style="margin-top: -10px; margin-left: 3px"
+                    >
+                    0
+                  </span>
+                </span>
+              </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
       <script src="js/bootstrap.bubble.min.js"></script>
-    </header>
-                                      <!-- End of header -->
-                            <!-- Tag này thêm vào để khỏi code nhầm -->
-
-                            <!--body-->
-
-
- 
+      
+                                  <!-- End of header -->
+                              <!-- Tag này thêm vào để khỏi code nhầm -->
+                                  <!--body-->
     
     <div id="wrapper">
         <div class="headline">
