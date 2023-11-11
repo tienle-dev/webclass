@@ -84,10 +84,21 @@ header{
    position: relative;
    text-transform: uppercase;
    text-align: center;
+   color: black;
 }
 
-.searching-bar > ul > li > a:hover{
+.nav-link:link{
+   color: black;
+   text-decoration: none;
+}
+.nav-link > span:hover{
    color: orange;
+   text-decoration: none;
+}
+
+.nav-link:hover{
+   color: orange;
+   text-decoration: none;
 }
 
     /* --------------------- end header css ------------------------ */
