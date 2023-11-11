@@ -4,69 +4,86 @@ header{
    height: 100px;
 }
 
-.container-fluid{
-   height: 80px;
+.row > div > img{
+   margin-top: -45px;
+   margin-left: 35px;
 }
 
-.section-header{
-   margin-left: 80px;
+.form-control{
+   margin: 50px 0px 0px 50px;
+   height: 40px;
 }
 
-.header-container{
-   padding: 10px 0;
+#basic-addon2{
+   margin-top: 50px;
 }
 
-.form-inputs{
-   position:relative;
+.col-2 > div > i{
+   margin-top: 50px;
 }
 
-.form-inputs .form-control{
-   height:45px; 
-   margin-left: 260px;
-   margin-top: 5px;
+.col-9{
+   margin-left: 9px;
+   margin-top: 47px;
 }
 
-.form-inputs .form-control:focus{
-   box-shadow:none;
-   border: 1px solid #000;
+.col-8{
+   margin-left: 5px;
+   margin-top: 47px;
 }
 
-.form-inputs i{
-   position:absolute;
-   right:10px;
-   top:15px;
+.fs-3{
+   color: orange;
 }
 
-.qty{
-   font-size:12px;
+.sdt{
+   color: orange;
 }
 
-.searchbar{
-   display: block;
-   height: 50px;
-   margin-top: -20px;
-   margin-bottom: 5px;
-   padding: 5px;
-   box-shadow: 0 3px 5px rgb(190, 190, 190);
-   background-color: beige;
+.login{
+   color: orange;
 }
 
-.searching-bar{
-   height: 30px;
+.col-md-2{
+   margin-top: 50px;
 }
 
-.searching-bar > ul > li{
-   display: inline-flex;
-   margin-top: 15px;
+.fs-3 text-black{
+   margin-top: 50px;
 }
 
-.searching-bar > ul > li > a{
-   text-decoration: none;
-   width: 200px;
-   text-align: center;
+.red-icon{
+   margin-top: -4px;
+}
+
+.main-menu{
+   background-color: beige !important;
+   box-shadow: 0 4px 0px #ddd;
+   border-radius: 2px !important;
+}
+
+.navbar{
+   
+}
+
+.nav-title{
+   font-size: 15px;
    font-weight: bold;
-   color: black;
+   padding: 0;
+   margin: 0 10px;
+   position: relative;
    text-transform: uppercase;
+   text-align: center;
+}
+
+.nav-title1{
+   font-size: 15px;
+   font-weight: bold;
+   padding: 0;
+   margin: 0px 10px 50px 0;
+   position: relative;
+   text-transform: uppercase;
+   text-align: center;
 }
 
 .searching-bar > ul > li > a:hover{
