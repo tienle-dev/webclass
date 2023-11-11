@@ -3,89 +3,211 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./../asset/css/my.css" type="text/css" />
+    <link rel="stylesheet" href="/asset/css/my.css" type="text/css" />
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      />
-      <link
+    />
+    <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
-      <link rel="stylesheet" href="/asset/css/my.css" />
-      <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-      />
-      <link
+    />
+    <link
       rel="shortcut icon"
-      href="./../asset/images/pet-food-favicon.png"
+      href="asset/images/pet-food-favicon.png"
       type="image/png"
-      />
-      <link rel="stylesheet" href="/asset/css/my.css" type="text/css" />
-      <title>petfood</title>
+    />
+    <link rel="stylesheet" href="/asset/css/my.css" type="text/css" />
+    <title>Thức ăn cho chó</title>
   </head>
+  <div> <img width="1260px" src="/asset/images/asd.webp"></div>
   <body>
-    <div> <img width="1260px" src="/asset/images/asd.webp"></div>
     <header>
-      <div class="section-header">
+      <section class="main-header">
         <div class="container-fluid">
-          <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
-            <div class="col-md-8">
-              <div class="d-flex form-inputs">
+          <div class="row">
+            <div class="col-md-2 py-2">
+              <img
+                src="asset/images/logo.png"
+                class="img-fluid"
+                alt="logo petfood"
+              />
+            </div>
+            <div class="col-md-5">
+              <div class="input-group mb-3">
                 <input
-                  class="form-control"
                   type="text"
-                  placeholder="Search any product..."
+                  class="form-control"
+                  placeholder="Tìm kiếm sản phẩm..."
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
                 />
-                <i class="bx bx-search"></i>
+                <span class="input-group-text" id="basic-addon2">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
               </div>
-              <div class="content-icon-login">
-                <a href="pages/Login.html">
-                  <img href="pages/Login.html" src="./../asset/images/User-icon.png" alt="login-cart" class="login-icon" style="width:17px;">
-                </a>
+            </div>
+            <div class="col-md-3">
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <div class="col-2">
+                      <div class="fs-3">
+                        <i class="fa-solid fa-phone-volume"></i>
+                      </div>
+                    </div>
+                    <div class="col-9">
+                      Tư vấn hỗ trợ
+                      <br />
+                      <strong class="sdt">0869900147</strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="col-2">
+                      <div class="fs-3">
+                        <i class="fa-solid fa-user"></i>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      Xin chào
+                      <br />
+                      <strong class="login">Đăng nhập</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="row">
+                <div class="col">
+                  <a href="#" class="position-relative">
+                    <span class="fs-3 text-black my-3">
+                      <i
+                        class="fa-solid fa-cart-arrow-down"
+                        style="margin-left: 30px"
+                      ></i>
+                    </span>
+                    <span>
+                      <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        style="margin-top: -10px; margin-left: 3px"
+                      >
+                        0
+                      </span>
+                    </span>
+                  </a>
+                </div>
+                <div class="col">
+                  <a href="#" class="position-relative">
+                    <span class="fs-3 text-black my-3">
+                      <i
+                        class="fa-regular fa-heart"
+                        style="margin-left: -20px"
+                      ></i>
+                    </span>
+                    <span>
+                      <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        style="margin-top: -10px; margin-left: 3px"
+                      >
+                        0
+                      </span>
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="content-icon-cart">
-            <img src="./../asset/images/icon-cart.png" alt="icon-cart" class="shopping-cart" style="width:20px;">
+        </div>
+      </section>
+      <section class="main-menu">
+        <div class="row">
+          <div class="col-lg-3 text-black px-5 py-3 text-center">
+            <a class="nav-link" aria-current="page" href="#">
+              <span class="nav-title1"
+                ><i class="fa-solid fa-bars"></i> Danh mục sản phẩm</span
+              ></a
+            >
+          </div>
+          <div class="col-lg-9">
+            <nav class="navbar navbar-expand-lg text-center">
+              <div class="container-fluid">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="index.html"
+                        ><span class="nav-title">Trang chủ</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/Dog Food.html"
+                        ><span class="nav-title">Thức ăn cho chó</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/Cat Food.html"
+                        ><span class="nav-title">Thức ăn cho mèo</span></a
+                      >
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <span class="nav-title">Sản phẩm khác </span>
+                      </a>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdown"
+                      >
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            >Something else here</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
           </div>
         </div>
-      </div>
+      </section>
+      <script src="js/bootstrap.bubble.min.js"></script>
     </header>
-      <div class="container">
-        <div class="searching-bar">
-          <ul>
-            <li>
-              <a href="/index.html" target="_self">
-                <span>Trang chủ</span>
-              </a>
-            </li>
-            <li>
-              <a href="./../pages/Dog Food.html" target="_self">
-                <span>Thức ăn cho chó</span>
-              </a>
-            </li>
-            <li>
-              <a href="./../pages/Cat Food.html" target="_self">
-                <span>Thức ăn cho mèo</span>
-              </a>
-            </li>
-            <li>
-              <a href="./../pages/Liên hệ.html" target="_self">
-                <span>Liên hệ</span>
-              </a>
-            </li>
-        </div>
-      </div>  
-
-    <title>Thức ăn cho chó</title>
-</head>
-<body>
-    
-
 <div id="wrapper">
     <div class="headline">
         <h3>Thức ăn cho chó</h3>
@@ -134,7 +256,7 @@
                     <a href="" class="buynow">Mua ngay</a>
                 </div>
                 <div class="product-info">
-                    <a href="" class="product-name">Thức ăn cho chó con cỡ vừa ROYAL CANIN Maxi Puppy</a>
+                    <a href="" class="product-name">Thức ăn cho chó con cỡ vừa ROYAL CANIN </a>
                    <div class="product-price">195.000đ</div>
                 </div>
             </div>
@@ -148,7 +270,7 @@
                         <a href="" class="buynow">Mua ngay</a>
                     </div>
                     <div class="product-info">
-                        <a href="" class="product-name">Thức ăn cho chó con cỡ lớn ROYAL CANIN Maxi Puppy</a>
+                        <a href="" class="product-name">Thức ăn cho chó con cỡ lớn ROYAL CANIN </a>
                        <div class="product-price">200.000đ</div>
                     </div>
                 </div>
@@ -162,7 +284,7 @@
                         <a href="" class="buynow">Mua ngay</a>
                     </div>
                     <div class="product-info">
-                        <a href="" class="product-name">Thức ăn cho chó con cỡ nhỏ ROYAL CANIN Maxi Puppy</a>
+                        <a href="" class="product-name">Thức ăn cho chó con cỡ nhỏ ROYAL CANIN </a>
                        <div class="product-price">215.000Đ</div>
                     </div>
                 </div>
@@ -176,7 +298,7 @@
                         <a href="" class="buynow">Mua ngay</a>
                     </div>
                     <div class="product-info">
-                        <a href="" class="product-name">Pate cho chó vị thịt gà IRIS OHYAMA One Care Chicken Meat</a>
+                        <a href="" class="product-name">Pate cho chó vị thịt gà IRIS OHYAMA One Care </a>
                        <div class="product-price">35.000đ</div>
                     </div>
                 </div>
@@ -190,7 +312,7 @@
                         <a href="" class="buynow">Mua ngay</a>
                     </div>
                     <div class="product-info">
-                        <a href="" class="product-name">Pate cho chó vị thịt bò IRIS OHYAMA One Care Beef</a>
+                        <a href="" class="product-name">Pate cho chó vị thịt bò IRIS OHYAMA One Care </a>
                        <div class="product-price">35.000đ</div>
                     </div>
                 </div>
@@ -204,7 +326,7 @@
                         <a href="" class="buynow">Mua ngay</a>
                     </div>
                     <div class="product-info">
-                        <a href="" class="product-name">Thức ăn cho chó trưởng thành cỡ lớn ROYAL CANIN Maxi Puppy</a>
+                        <a href="" class="product-name">Thức ăn cho chó trưởng thành cỡ lớn ROYAL CANIN</a>
                        <div class="product-price">165.000đ</div>
                     </div>
                 </div>
@@ -218,7 +340,7 @@
                       <a href="" class="buynow">Mua ngay</a>
                   </div>
                   <div class="product-info">
-                      <a href="" class="product-name">Thức ăn cho chó trưởng thành cỡ vừa ROYAL CANIN Maxi Puppy</a>
+                      <a href="" class="product-name">Thức ăn cho chó trưởng thành cỡ vừa ROYAL CANIN </a>
                      <div class="product-price">160.000đ</div>
                   </div>
               </div>
@@ -232,7 +354,7 @@
                     <a href="" class="buynow">Mua ngay</a>
                 </div>
                 <div class="product-info">
-                    <a href="" class="product-name">Thức ăn cho chó trưởng thành cỡ nhỏ ROYAL CANIN Maxi Puppy</a>
+                    <a href="" class="product-name">Thức ăn cho chó trưởng thành cỡ nhỏ ROYAL CANIN </a>
                    <div class="product-price">180.000đ</div>
                 </div>
             </div>
