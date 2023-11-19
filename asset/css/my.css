@@ -1,14 +1,5 @@
       /* ------------------------ header css ------------------------ */
 
-/* .header_main{
-
-}*/
-
-/* *{
-    margin: 0px ;
-
-}  */
-
 html{
     margin: none;
     outline: none;
@@ -20,7 +11,7 @@ header{
 
 .row > div > img{
    margin-top: -45px;
-   margin-left: 35px;
+   margin-left: 90px;
 }
 
 .form-control{
@@ -86,17 +77,34 @@ header{
    background-color: beige !important;
    box-shadow: 0 4px 0px #ddd;
    border-radius: 2px !important;
+   list-style-type: none;
+   overflow: hidden;
+   position: fixed;
+   position: sticky;
+   /* width: 100%; */
+}
+
+.nav-title1{
+   font-size: 18px;
+   font-weight: bold;
+   padding: 0;
+   margin: 10px 10px 10px 0;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.container-fluid{
+   margin-left: -40px;
 }
 
 .nav-title{
-   font-size: 15px;
+   font-size: 18px;
    font-weight: bold;
    padding: 0;
    margin: 10px 10px 10px 0;
    position: relative;
    text-transform: uppercase;
    text-align: center;
-   vertical-align: center;
 }
 
 .nav-item > a{
