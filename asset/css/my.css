@@ -65,7 +65,8 @@ header{
    margin-top: 50px;
 }
 
-.fs-3 text-black{
+.col-2 .fs-3 i{
+   color: orange;
    margin-top: 50px;
 }
 
