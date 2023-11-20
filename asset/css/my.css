@@ -1,68 +1,78 @@
       /* ------------------------ header css ------------------------ */
-
-html{
-    margin: none;
-    outline: none;
+html {
+   margin: none;
+   outline: none;
 }
 
-header{
+header {
    height: 100px;
 }
 
-.row > div > img{
+.row>div>img {
    margin-top: -45px;
    margin-left: 90px;
 }
 
-.form-control{
+.form-control {
    margin: 50px 0px 0px 50px;
    height: 40px;
 }
 
-#basic-addon2{
+#basic-addon2 {
    margin-top: 50px;
 }
 
-.col-2 > div > i{
+
+.col-2>div>i {
    margin-top: 50px;
 }
 
-.col-9{
-   margin-left: 9px;
-   margin-top: 47px;
+#col-3{
+   margin-top: 45px;
+   margin-left: 30px;
 }
 
-.col-8{
-   margin-left: 5px;
-   margin-top: 47px;
+#col-8{
+   margin-top: 43px;
+   margin-left: -13px;
 }
 
-.fs-3{
+.col-2{
+   margin-left: 20px;
+   margin-top: -5px;
+}
+
+.col-8 {
+   margin-top: 43px;
+}
+
+.col-md-2 {
+   margin-left: -10px;
+   margin-top: 50px;
+}
+
+.fs-3 {
    color: orange;
 }
 
-.sdt{
+.sdt {
    color: orange;
 }
 
-.login{
+.login {
    color: orange;
 }
 
-.sell-time{
+.sell-time {
    color: orange;
 }
 
-.title1{
+.title1 {
    margin-top: 7px;
 }
 
-.col-lg-2{
+.col-lg-2 {
    margin-top: 46px;
-}
-
-.col-md-2{
-   margin-top: 50px;
 }
 
 .col-2 .fs-3 i{
@@ -70,20 +80,30 @@ header{
    margin-top: 50px;
 }
 
-.red-icon{
+.col-8 a{
+   text-decoration: none;
+}
+
+.col-8 a span{
+   color: black;
+}
+
+.red-icon {
    margin-top: -4px;
 }
 
-.main-menu{
+.main-menu {
    background-color: beige !important;
    box-shadow: 0 4px 0px #ddd;
    border-radius: 2px !important;
    list-style-type: none;
+
+   /* top: 20px; */
    transition: 0.5s;
    /* width: 100%; */
 }
 
-.nav-title1{
+.nav-title1 {
    font-size: 18px;
    font-weight: bold;
    padding: 0;
@@ -92,11 +112,7 @@ header{
    text-align: center;
 }
 
-.container-fluid{
-   margin-left: -40px;
-}
-
-.nav-title{
+.nav-title {
    font-size: 18px;
    font-weight: bold;
    padding: 0;
@@ -106,29 +122,31 @@ header{
    text-align: center;
 }
 
-.nav-item > a{
+.nav-item > a {
    margin-top: 5px;
    margin-left: 20px;
 }
-.navbar-nav{
+
+.navbar-nav {
    margin-left: 50px;
 }
 
-.nav-icon{
+.nav-icon {
    margin-top: 5px;
    margin-left: 50px;
 }
 
-.nav-link:link{
+.nav-link:link {
    color: black;
    text-decoration: none;
 }
-.nav-link > span:hover{
+
+.nav-link>span:hover {
    color: orange;
    text-decoration: none;
 }
 
-.nav-link:hover{
+.nav-link:hover {
    color: orange;
    text-decoration: none;
 }
