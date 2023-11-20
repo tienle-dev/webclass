@@ -75,6 +75,11 @@ header {
    margin-top: 46px;
 }
 
+.main-menu .row .col-lg-8{
+   margin-top: 2.5px;
+   margin-left: -65px;
+}
+
 .col-2 .fs-3 i{
    color: orange;
    margin-top: 50px;
@@ -103,20 +108,68 @@ header {
    /* width: 100%; */
 }
 
+      /* mobile css */
+
+.main-menu .row{
+   --bs-gutter-x: 0rem;
+}
+
+#mobile-menu ul.navmenu .menutop {
+   display: inline-block;
+   overflow: hidden;
+   padding-left: 10px;
+}
+
+.nav-menu{
+   box-shadow: 0 4px 0px #ddd;
+   z-index: 9;
+}
+
+#mobile-menu {
+   display: none;
+   text-align: left;
+   float: none;
+   float: left;
+}
+
+#mobile-menu ul li{
+   height: 51px;
+}
+
+#mobile-menu ul{
+   margin: auto;
+   padding: 0px;
+   list-style: none;
+   max-height: 90vh;
+   overflow-y: auto;
+}
+
+.menutop a {
+   color: #fff;
+}
+
+a {
+   color: #337ab7;
+   text-decoration: none;
+   background-color: transparent;
+}
+
+      /* end mobile css */
+
 .nav-title1 {
-   font-size: 18px;
+   margin-top: 10px;
+   font-size: 15.5px;
    font-weight: bold;
-   padding: 0;
-   margin: 10px 10px 10px 0;
+   margin-left: 50px;
    text-transform: uppercase;
    text-align: center;
 }
 
 .nav-title {
-   font-size: 18px;
+   font-size: 16px;
    font-weight: bold;
    padding: 0;
-   margin: 10px 10px 10px 0;
+   margin-right: 20px;
    position: relative;
    text-transform: uppercase;
    text-align: center;
