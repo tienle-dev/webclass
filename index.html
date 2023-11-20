@@ -30,7 +30,7 @@
   <div> <img width="100%" src="/asset/images/asd.webp"></div>
   <body>
     <header>
-      <section class="main-header">
+      <div class="main-header">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-2 py-2">
@@ -128,8 +128,9 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="main-menu">
+      </div>
+
+      <div class="main-menu">
         <div class="row">
           <div class="col-lg-3 text-black px-5 py-4 text-center">
             <a class="nav-link" aria-current="page" href="#">
@@ -169,7 +170,7 @@
                         role="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
-                      >
+                        >
                         <span class="nav-title">Sản phẩm khác </span>
                       </a>
                       <ul
@@ -194,10 +195,29 @@
             </nav>
           </div>
         </div>
-      </section>
+      </div>
       <script src="js/bootstrap.bubble.min.js"></script>
+      <script>
+        const header = document.querySelector(".main-header");
+        var menu =  document.querySelector(".main-menu");
+        window.addEventListener("scroll", myFunction);
+      
+      var temp;
+      function myFunction() {
+          temp = header.getBoundingClientRect().top + header.getBoundingClientRect().height;
+          if (temp <= 0) {
+            menu.style.setProperty("position", "fixed");
+            menu.style.setProperty("top", "0px");
+            menu.style.setProperty("width", "100%");
+          }
+          else{
+            menu.style.removeProperty("position", "fixed");
+            menu.style.removeProperty("top", "0px");
+          }
+      }
+      </script>
     </header>
-    
+
                                       <!-- End of header -->
                             <!-- Tag này thêm vào để khỏi code nhầm -->
                             <!--body-->
