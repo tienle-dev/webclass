@@ -29,10 +29,11 @@
   </head>
   <div> <img width="100%" src="./../asset/images/asd.webp"></div>
   <body>
+    <header>
       <div class="main-header">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-2 py-2">
+            <div class="col-md-2 py-3">
               <img width="50%"
                 src="./../asset/images/1.png"
                 class="img-fluid"
@@ -83,21 +84,24 @@
                         <span>Xin chào</span>
                         <br />
                         <strong class="login">Đăng nhập</strong>
+                        <br />
                         </a>
+                      <a href="./../pages/Register.html">
+                      <strong class="register">Đăng ký</strong>
+                      </a>
                       </div>
                   </div>
                 </div>
               </div>
-              <div class="row"></div>
             </div>
             <div class="col-md-2 px-3">
-              <div class="row" style="max-width: 1000px;">
+              <div class="row">
                 <div class="col">
                   <a href="#" class="position-relative">
                     <span class="fs-3 text-black my-3">
                       <i
                         class="fa-solid fa-cart-arrow-down"
-                        style="margin-left: 30px"
+                        style="margin-left: -10px"
                       ></i>
                     </span>
                     <span>
@@ -115,13 +119,13 @@
                     <span class="fs-3 text-black my-3">
                       <i
                         class="fa-regular fa-heart"
-                        style="margin-left: -20px"
+                        style="margin-left: -60px"
                       ></i>
                     </span>
                     <span>
                       <span
                         class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                        style="margin-top: -10px; margin-left: 3px"
+                        style="margin-top: -10px; margin-left: -30px"
                       >
                         0
                       </span>
@@ -133,6 +137,7 @@
           </div>
         </div>
       </div>
+
       <div class="main-menu">
 	      <!-- mobile menu -->
 	          <!--  <div class="hidden-md" id="mobile-menu">
@@ -147,75 +152,148 @@
     						</li>
     					</ul>
 				          </div> -->         
-          	<!-- end mobile menu -->
+          <!-- end mobile menu -->
         <div class="row">
-          <div class="col-lg-3 text-black my-4 text-center">
-            <a class="nav-link" aria-current="page" href="#">
-              <span class="nav-title1"
-                ><i class="fa-solid fa-bars"></i> Danh mục sản phẩm</span
-              ></a
-            >
+          <div class="col-lg-3 text-black px-3 text-center sticky-top">
+            <ul>
+              <li id="menu" class="dropdown__item" class="choose">
+                <a href="./../index.html" class="choose" aria-current="page"><span class="nav-title1"><i class="fa-solid fa-bars"></i> Danh mục sản phẩm</span></a>
+                <!-- <div class="dropdown__container" style="background-color: mintcream;">
+                  <div class="dropdown__content">
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                         <img src="" alt="...">
+                        </div>
+                    </div>
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                          <img src="" alt="...">
+                        </div>
+                    </div>
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                          <img src="" alt="...">
+                        </div>
+                    </div>
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                           <img src="" alt="...">
+                        </div>
+                    </div>
+                </div>
+              </div> -->
+              </li>
+            </ul>
           </div>
           <div class="col-lg-8">
             <nav class="navbar navbar-expand-lg text-center">
-              <div class="container-fluid">
-                <div
-                  class="collapse navbar-collapse"
-                  id="navbar"
-                >
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="./../index.html"
-                        ><span class="nav-title">Trang chủ</span></a>
+              <div class="container">
+                <div class="collapse navbar-collapse" id="navbar">
+                  <ul class="navbar-nav">
+                    <li id="menu" class="dropdown__item" class="choose">
+                      <a href="./../index.html" class="choose" aria-current="page"><span class="nav-title">Trang chủ</span></a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./../pages/Dog Food.html"
-                        ><span class="nav-title">Thức ăn cho chó</span></a>
-                        <!-- <ul class="level1 lv1-mega right-sub" style="top: 0px; left: 165px; display: none;">
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                        </ul> -->
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./../pages/Cat Food.html"
-                        ><span class="nav-title">Thức ăn cho mèo</span></a>
-                        <!-- <ul class="level1 lv1-mega right-sub" style="top: 0px; left: 165px; display: none;">
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                        </ul> -->
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        id="navbarDropdown"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                        >
-                        <span class="nav-title">Sản phẩm khác </span>
-                      </a>
-                    </li>
+                      <li id="menu" class="dropdown__item" class="choose">                      
+                        <a href="./../pages/Dog Food.html" class="choose"><span class="nav-title" style="color: #000000;">Thức ăn cho chó</span></a>
+                        <div class="dropdown__container" style="background-color: mintcream;">
+                          <div class="dropdown__content">
+                            <div class="dropdown__group">
+                                <!-- 1 -->
+                                <div class="dropdown__icon">
+                                 <img src="" alt="...">
+                                </div>
+                            </div>
+                                <!-- 2 -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                  <img src="" alt="...">
+                                </div>
+                            </div>
+                                <!-- 3 -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                  <img src="" alt="...">
+                                </div>
+                            </div>
+                                <!-- 4 -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                  <img src="" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      </li> 
+                      <li id="menu" class="dropdown__item" class="choose">                      
+                        <a href="./../pages/Cat Food.html" class="choose"><span class="nav-title" style="color: #000000;">Thức ăn cho mèo</span></a>
+                        <div class="dropdown__container" style="background-color: mintcream;">
+                          <div class="dropdown__content">
+                              <div class="dropdown__group">
+                                  <!-- 1 -->
+                                  <div class="dropdown__icon">
+                                   <img src="" alt="...">
+                                  </div>
+                              </div>
+                                  <!-- 2 -->
+                              <div class="dropdown__group">
+                                  <div class="dropdown__icon">
+                                    <img src="" alt="...">
+                                  </div>
+                              </div>
+                                  <!-- 3 -->
+                              <div class="dropdown__group">
+                                  <div class="dropdown__icon">
+                                    <img src="" alt="...">
+                                  </div>
+                              </div>
+                                  <!-- 4 -->
+                              <div class="dropdown__group">
+                                  <div class="dropdown__icon">
+                                    <img src="" alt="...">
+                                  </div>
+                              </div>
+                          </div>
+                          </div>
+                      </li> 
+                      <li id="menu" class="dropdown__item" class="choose">                      
+                        <a href="./../index.html" class="choose"><span class="nav-title" style="color: #000000;">Sản phẩm khác</span></a>
+                        <div class="dropdown__container" style="background-color: mintcream;">
+                          <div class="dropdown__content">
+                            <div class="dropdown__group">
+                                <!-- 1 -->
+                                <div class="dropdown__icon">
+                                 <img src="" alt="...">
+                                </div>
+                            </div>
+                                <!-- 2 -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                  <img src="" alt="...">
+                                </div>
+                            </div>
+                                <!-- 3 -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                  <img src="" alt="...">
+                                </div>
+                            </div>
+                                <!-- 4 -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                   <img src="" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      </li> 
                   </ul>
+                </div>
                 </div>
               </div>
             </nav>
           </div>
         </div>
       </div>
-      <!-- <script>
-        window.addEventListener("mouseover",add_element);
-        function add_element(){
-          if (title == true){
-              var html = '<div style="background:red; margin: 5px; padding:5px; color:#FFF">''</div>';
-              document.getElementById('result').insertAdjacentHTML('afterend', html);
-          }
-      }
-      </script> -->
       <script src="js/bootstrap.bubble.min.js"></script>
       <script>
         const header = document.querySelector(".main-header");
@@ -225,7 +303,7 @@
       var temp;
       function myFunction() {
           temp = header.getBoundingClientRect().top + header.getBoundingClientRect().height;
-          if (temp <= 0) {
+          if (temp <= 10) {
             menu.style.setProperty("position", "fixed");
             menu.style.setProperty("top", "0px");
             menu.style.setProperty("width", "100%");
@@ -239,7 +317,7 @@
       </script>
     </header>
 
-    <!-- Header -->
+    			<!-- Header -->
 
 <div id="wrapper">
     <div class="headline">
