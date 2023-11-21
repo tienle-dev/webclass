@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/admin/admin-css/admin.css">
+    <link rel="icon" type="image/png" href="assets/img/LOGO.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body style="background-color: #f3f8ff;">
+  <input type="checkbox" id="menu-toggle">
+  <div class="sidebar">
+   <div class="side-header">
+   
+   </div>
+   
+   <div class="side-content" style="background-color: #f3f8ff; border-right: 1px solid #000;">
+       <div class="profile">
+           <div class="profile">
+               <img src="/asset/images/1.png" alt="Logo" style="width: 100%; height: auto;">
+               <h3 style="color: #74767d; font-weight: bold;">PET FOOD</h3> 
+           </div>
+       </div>
+
+       <div class="side-menu">
+           <ul>
+               <li style="margin-bottom: 15px;">
+                   <a href="/admin/admin.html">
+                        <span class="las la-address-card" style="color: #74767d;"></span>
+                        <h3 style="color: #74767d; font-weight: bold;">Người Quản Trị</h3>
+                    </a>
+                </li>
+               <li style="margin-bottom: 15px;" >
+                  <a href="/admin/admin-user.html">
+                       <span class="las la-user-alt" style="color:#74767d;"></span>
+                       <h3 style="color: #74767d; font-weight: bold;">Khách Hàng</h3>
+                   </a>
+               </li>
+            
+               <li style="margin-bottom: 15px;">
+                  <a href="/admin/admin-product.html">
+                       <span class="las la-clipboard-list" style="color:#74767d;"></span>
+                       <h3 style="color: #74767d; font-weight: bold;">Sản Phẩm</h3>
+                   </a>
+               </li>
+               <li style="margin-bottom: 15px;">
+                  <a href="/admin/admin-order.html">
+                       <span class="las la-shopping-cart" style="color:#74767d;"></span>
+                       <h3 style="color: #74767d; font-weight: bold;">Đơn Hàng</h3>
+                   </a>
+               </li>
+         
+           </ul>
+       </div>
+   </div>
+</div>
+
+   <div class="main-content" style="background-color: #f3f8ff;">
+       
+       <header>
+           <div class="header-content">
+               <label for="menu-toggle" id="bar-admin">
+                   <span class="las la-bars" style="font-size: 28px; margin-top: 8px;"></span>
+               </label>
+               
+               <div class="header-menu">
+                       
+                   <div class="user" style="margin-right: 8px; margin-top: -30px;">
+                       <div class="bg-img" style="background-image: url()"></div>
+                       <span style="font-size: 25px;cursor: pointer;" onclick="window.location.href='admin.html'"></span>
+                       <span style="font-size: 20px; cursor: pointer; color:#74767d ; font-weight: 600;" onclick="window.location.href='admin.html'">Trang chủ</span>
+                   </div>
+               </div>
+           </div>
+       </header>
+        
+        <main >
+<div class="page-content">
+        
+    <h1 style="padding: 1.3rem 0rem;color: #74767d; margin-left: 55px;" id="product">Sản Phẩm Muốn Thêm</h1>
+    <div class="user-tab" style="margin-left: 55px;">
+        <div class="user-input">
+             Mã:<input type="text" name="id-product" id="id-product"> 
+             
+        </div>
+        <div class="user-input" style="display: none;">
+           
+           Hình ảnh:<input type="text" name="fimage" id="fimage" >
+                 </div>
+        <div class="user-input">
+           
+          Tên sản phẩm:<input type="text" name="fproduct" id="fproduct">
+        </div>
+        <div class="user-input">
+          Giá:<input type="text" name="price" id="price">
+       
+        </div>
+        <div class="user-input">
+              Số lượng:<input type="text" name="quantity" id="quantity">
+
+        </div>
+
+   
+
+       <div>
+        <button onclick="addHtmlTableRow1();">Thêm +</button>
+                <button onclick="editHtmlTbleSelectedRow1();">Chỉnh <span class="las la-edit"></span></button>
+                <button onclick="removeSelectedRow1();">Xóa <span class="las la-trash"></span></button>
+</div>
+
+    </div>
+</div>
+          
+<div class="records table-responsive" >
+
+<div class="record-header">
+<div class="add">
+<span>Mục</span>
+<select name="" id="">
+<option value="">ID</option>
+</select>
+
+</div>
+
+<div class="browse">
+<input type="search" placeholder="Tìm kiếm" class="record-search">
+
+</div>
+</div>
+
+<div>
+<table width="100%" id="table-product">
+<thead>
+<tr>
+    <th>Mã Sản Phẩm</th>
+    <th> Hình Ảnh Sản Phẩm</th>
+    <th> Tên sản phẩm</th>
+    <th> Giá</th>
+    <th> Số Lượng</th>
+    <th> Ngày Thêm</th> 
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#1</td>
+<td>
+
+   <div class="image-product-admin">
+    <div>
+   <img src="/asset/images/thucanchocho/thucanchoconcolon.webp" id="productImage">
+    </div>
+  <div>
+    <input type="file" name="image5"  accept="image/png, image/jpeg, image/jpg" id="imageInput">  
+  </div>
+        
+   </div>
+ 
+</td>
+<td>
+
+  Thức ăn cho chó con cỡ lớn ROYAL CANIN Maxi Puppy
+
+</td>
+<td>200.000vnđ</td>
+<td>300</td>
+<td>1/11/2023</td>
+
+
+</tr>
+<tr>
+<td>#2</td>
+<td>
+
+    <div class="image-product-admin">
+     <div>
+    <img src="/asset/images/thucanchomeo/supchomeovicangunuong.jpg
+    " id="productImage">
+     </div>
+   <div>
+     <input type="file" name="image5"  accept="image/png, image/jpeg, image/jpg" id="imageInput">   
+   </div>
+         
+    </div>
+  
+ </td>
+<td>
+
+
+  Súp cho mèo CIAO vị cá ngừ nướng
+
+</td>
+<td>25.000vnđ</td>
+<td>190</td>
+<td>5/11/2023</td>
+
+</tr>
+<tr>
+<td>#3</td>
+<td>
+
+    <div class="image-product-admin">
+     <div>
+    <img src="/asset/images/thucanchocho/banhthuongchochovidautay.jpg" id="productImage">
+     </div>
+   <div>
+     <input type="file" id="imageInput" name="image5"  accept="image/png, image/jpeg, image/jpg">  
+   </div>
+         
+    </div>
+  
+ </td>
+<td>
+  Bánh thưởng cho chó vị dâu tây JERHIGH Strawberry Sticks
+</td>
+<td>55.000vnđ</td>
+<td>200</td>
+<td>7/11/2023</td>
+        
+
+</tr>
+
+
+<tr>
+<td>#4</td>
+<td>
+
+    <div class="image-product-admin">
+     <div>
+    <img src="/asset/images/thucanchomeo/patechomeovicangucacom.jpg" id="productImage">
+     </div>
+
+   <div>
+     <input type="file" id="imageInput" name="image5"  accept="image/png, image/jpeg, image/jpg">  
+
+   </div>
+         
+    </div>
+  
+ </td>
+<td>
+  Pate cho mèo vị cá ngừ cá cơm CAT SEA FISH
+</td>
+<td>30.000vnđ</td>
+<td>145</td>
+<td>6/11/2023</td>
+
+      
+ 
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+</main>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+ window.addEventListener("DOMContentLoaded", function() {
+        var predefinedContent = '<div class="image-product-admin"><div><img src="assets/images/sp/cocaori.png" id="productImage"></div><div><input id="imageInput" type="file" name="image5"  accept="image/png, image/jpeg, image/jpg"></div></div>';
+        document.getElementById("fimage").value = predefinedContent;
+      });
+   
+    var rIndex,
+        table1 = document.getElementById("table-product");
+    
+    // kiểm tra đầu vào 
+    function checkEmptyInput1()
+    {
+        var isEmpty = false,
+        idproduct = document.getElementById("id-product").value,
+        fproduct = document.getElementById("fproduct").value,
+            quantity = document.getElementById("quantity").value,
+          dateadd = document.getElementById("dateadd").value,
+            price= document.getElementById("price").value;
+          
+            if(idproduct === ""){
+            alert("không được để trống");
+            isEmpty = true;
+        }
+        else if(fproduct === ""){
+            alert("không được để trống");
+            isEmpty = true;
+        }
+        else if(quantity === ""){
+            alert("không được để trống");
+            isEmpty = true;
+        }
+        else if(dateadd === ""){
+            alert("không được để trống");
+            isEmpty = true;
+        }
+        else if(price === ""){
+            alert("không được để trống");
+            isEmpty = true;
+        }
+      
+        return isEmpty;
+    }
+    
+    // add Row
+    function addHtmlTableRow1()
+    {
+   
+        if(!checkEmptyInput1()){
+        var newRow = table1.insertRow(table1.length),
+            cell1 = newRow.insertCell(0),
+            cell2 = newRow.insertCell(1),
+            cell3 = newRow.insertCell(2),
+            cell4 = newRow.insertCell(3),
+            cell5 = newRow.insertCell(4),
+            cell6 = newRow.insertCell(5),
+          
+            idproduct = document.getElementById("id-product").value,
+            fimage=document.getElementById("fimage").value,
+            fproduct = document.getElementById("fproduct").value,
+            quantity = document.getElementById("quantity").value,
+           dateadd = document.getElementById("dateadd").value,
+            price = document.getElementById("price").value;
+           
+            cell1.innerHTML = idproduct;
+            cell2.innerHTML = fimage;
+            cell3.innerHTML = fproduct;
+        cell4.innerHTML = quantity;
+        cell5.innerHTML = dateadd;
+        cell6.innerHTML = price;
+       
+        // call the function to set the event to the new row
+        selectedRowToInput1();
+    }
+    }
+    
+    // display selected row data into input text
+    function selectedRowToInput1()
+    {
+        
+        for(var i = 1; i < table1.rows.length; i++)
+        {
+            
+            table1.rows[i].onclick = function()
+            {
+
+              rIndex = this.rowIndex;
+              document.getElementById("id-product").value = this.cells[0].innerHTML;
+              document.getElementById("fimage").value = this.cells[1].innerHTML;
+              document.getElementById("fproduct").value = this.cells[2].innerHTML;
+              document.getElementById("quantity").value = this.cells[3].innerHTML;
+              document.getElementById("dateadd").value = this.cells[4].innerHTML;
+              document.getElementById("price").value = this.cells[5].innerHTML;
+           
+             
+            };
+        }
+    }
+    selectedRowToInput1();
+    
+    function editHtmlTbleSelectedRow1()
+    {
+        var     idproduct = document.getElementById("id-product").value,
+        fimage = document.getElementById("fimage").value,
+            fproduct = document.getElementById("fproduct").value,
+            quantity = document.getElementById("quantity").value,
+           dateadd = document.getElementById("dateadd").value,
+            price = document.getElementById("price").value;
+            
+       if(!checkEmptyInput1()){
+        table1.rows[rIndex].cells[0].innerHTML = idproduct;
+        table1.rows[rIndex].cells[1].innerHTML = fimage;
+        table1.rows[rIndex].cells[2].innerHTML = fproduct;
+        table1.rows[rIndex].cells[3].innerHTML = quantity;
+        table1.rows[rIndex].cells[4].innerHTML = dateadd;
+        table1.rows[rIndex].cells[5].innerHTML = price;
+      
+      }
+    }
+    
+    function removeSelectedRow1() {
+  // Check if the row index is greater than 0
+  if (rIndex > 0) {
+    // Prompt the user to confirm the deletion
+    var result = confirm("Bạn có muốn xóa?");
+
+    // If the user confirms the deletion, then delete the row
+    if (result == true) {
+      table1.deleteRow(rIndex);
+    } else {
+      // If the user cancels the deletion, then prevent the default action
+      event.preventDefault();
+    }
+  }
+
+  // Clear input text
+  document.getElementById("id-product").value = "";
+  document.getElementById("fimage").value = "";
+  document.getElementById("fproduct").value = "";
+  document.getElementById("quantity").value = "";
+  document.getElementById("dateadd").value = "";
+  document.getElementById("price").value = "";
+}
+
+</script>
+
+<script>
+    const fileInputs = document.querySelectorAll('input[type="file"]');
+ 
+ // Add a change event listener to each file input element
+ fileInputs.forEach(fileInput => {
+   fileInput.addEventListener('change', function(event) {
+     // Get the image element associated with the file input element
+     const img = event.target.closest('.client').querySelector('img');
+ 
+     // Get the new image file
+     const newImageFile = event.target.files[0];
+ 
+     // Create a new FileReader object
+     const reader = new FileReader();
+ 
+     // Load the new image file
+     reader.onload = function() {
+       // Set the src attribute of the image element to the new image file
+       img.src = reader.result;
+     };
+ 
+     // Read the new image file
+     reader.readAsDataURL(newImageFile);
+   });
+ });
+ 
+
+
+ const imageProductAdminDivs = document.querySelectorAll('.image-product-admin');
+
+for (const imageProductAdminDiv of imageProductAdminDivs) {
+  const imageInput = imageProductAdminDiv.querySelector('#imageInput');
+  const image = imageProductAdminDiv.querySelector('#productImage');
+
+  imageInput.addEventListener('change', function() {
+    const file = this.files[0];
+
+    // Create a new FileReader object
+    const reader = new FileReader();
+
+    // Read the selected file
+    reader.onload = function() {
+      // Set the image src attribute to the selected file
+      image.src = reader.result;
+    };
+
+    // Start reading the selected file
+    reader.readAsDataURL(file);
+  });
+}
+   </script>
