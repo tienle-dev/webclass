@@ -18,10 +18,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
       rel="shortcut icon"
       href="./../asset/images/pet-food-favicon.png"
@@ -29,18 +26,16 @@
     />
     <link rel="stylesheet" href="./../asset/css/my.css" type="text/css" />
     <link rel="stylesheet" href="./../asset/css/login.css" type="text/css" />
-    <title>SignUp</title>
+    <title>petfood</title>
   </head>
-  <div><img width="100%" src="./../asset/images/asd.webp" /></div>
+  <div> <img width="100%" src="./../asset/images/asd.webp"></div>
   <body>
-                          <!-- Header -->
     <header>
       <div class="main-header">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-2 py-2">
-              <img
-                width="50%"
+            <div class="col-md-2 py-3">
+              <img width="50%"
                 src="./../asset/images/1.png"
                 class="img-fluid"
                 alt="logo petfood"
@@ -83,15 +78,19 @@
                         <a href="./../pages/Login.html">
                           <i class="fa-solid fa-user"></i>
                         </a>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-8">
-                      <a href="./../pages/Login.html">
+                      <div class="col-8">
+                        <a href="./../pages/Login.html">
                         <span>Xin chào</span>
                         <br />
                         <strong class="login">Đăng nhập</strong>
+                        <br />
+                        </a>
+                      <a href="./../pages/Register.html">
+                      <strong class="register">Đăng ký</strong>
                       </a>
-                    </div>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -103,7 +102,7 @@
                     <span class="fs-3 text-black my-3">
                       <i
                         class="fa-solid fa-cart-arrow-down"
-                        style="margin-left: 30px"
+                        style="margin-left: -10px"
                       ></i>
                     </span>
                     <span>
@@ -121,13 +120,13 @@
                     <span class="fs-3 text-black my-3">
                       <i
                         class="fa-regular fa-heart"
-                        style="margin-left: -20px"
+                        style="margin-left: -60px"
                       ></i>
                     </span>
                     <span>
                       <span
                         class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                        style="margin-top: -10px; margin-left: 3px"
+                        style="margin-top: -10px; margin-left: -30px"
                       >
                         0
                       </span>
@@ -141,8 +140,8 @@
       </div>
 
       <div class="main-menu">
-        <!-- mobile menu -->
-        <!--  <div class="hidden-md" id="mobile-menu">
+	      <!-- mobile menu -->
+	          <!--  <div class="hidden-md" id="mobile-menu">
 					    <ul class="navmenu">
     						<li>
     							<div class="menutop">
@@ -153,68 +152,143 @@
     							</div> 
     						</li>
     					</ul>
-				          </div> -->
-        <!-- end mobile menu -->
+				          </div> -->         
+          <!-- end mobile menu -->
         <div class="row">
-          <div class="col-lg-3 text-black px-5 py-4 text-center">
-            <a class="nav-link" aria-current="page" href="#">
-              <span class="nav-title1"
-                ><i class="fa-solid fa-bars"></i> Danh mục sản phẩm</span
-              ></a
-            >
+          <div class="col-lg-3 text-black px-3 text-center sticky-top">
+            <ul>
+              <li id="menu" class="dropdown__item" class="choose">
+                <a href="./../index.html" class="choose" aria-current="page"><span class="nav-title1"><i class="fa-solid fa-bars"></i> Danh mục sản phẩm</span></a>
+                <!-- <div class="dropdown__container" style="background-color: mintcream;">
+                  <div class="dropdown__content">
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                         <img src="" alt="...">
+                        </div>
+                    </div>
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                          <img src="" alt="...">
+                        </div>
+                    </div>
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                          <img src="" alt="...">
+                        </div>
+                    </div>
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                           <img src="" alt="...">
+                        </div>
+                    </div>
+                </div>
+              </div> -->
+              </li>
+            </ul>
           </div>
           <div class="col-lg-8">
             <nav class="navbar navbar-expand-lg text-center">
               <div class="container">
                 <div class="collapse navbar-collapse" id="navbar">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        aria-current="page"
-                        href="./../index.html"
-                      >
-                        <span class="nav-title">Trang chủ</span>
-                      </a>
+                  <ul class="navbar-nav">
+                    <li id="menu" class="dropdown__item" class="choose">
+                      <a href="./../index.html" class="choose" aria-current="page"><span class="nav-title">Trang chủ</span></a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./../pages/Dog Food.html"
-                        ><span class="nav-title">Thức ăn cho chó</span></a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./../pages/Cat Food.html"
-                        ><span class="nav-title">Thức ăn cho mèo</span></a
-                      >
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        id="navbarDropdown"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <span class="nav-title">Sản phẩm khác </span>
-                      </a>
-                      <ul
-                        class="dropdown-menu"
-                        aria-labelledby="navbarDropdown"
-                      >
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Another action</a>
-                        </li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li>
-                          <a class="dropdown-item" href="#"
-                            >Something else here</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
+                      <li id="menu" class="dropdown__item" class="choose">                      
+                        <a href="./../pages/ Food.html" class="choose"><span class="nav-title" style="color: #000000;">Thức ăn cho chó</span></a>
+                        <div class="dropdown__container" style="background-color: mintcream;">
+                          <div class="dropdown__content">
+                            <div class="dropdown__group">
+                                <!-- 1 -->
+                                <div class="dropdown__icon">
+                                 <img src="" alt="...">
+                                </div>
+                            </div>
+                                <!-- 2 -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                  <img src="" alt="...">
+                                </div>
+                            </div>
+                                <!-- 3 -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                  <img src="" alt="...">
+                                </div>
+                            </div>
+                                <!-- 4 -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                   <img src="" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      </li> 
+                      <li id="menu" class="dropdown__item" class="choose">                      
+                        <a href="./Cat Food.html" class="choose"><span class="nav-title" style="color: #000000;">Thức ăn cho mèo</span></a>
+                        <div class="dropdown__container" style="background-color: mintcream;">
+                          <div class="dropdown__content">
+                              <div class="dropdown__group">
+                                  <!-- 1 -->
+                                  <div class="dropdown__icon">
+                                   <img src="" alt="...">
+                                  </div>
+                              </div>
+                                  <!-- 2 -->
+                              <div class="dropdown__group">
+                                  <div class="dropdown__icon">
+                                    <img src="" alt="...">
+                                  </div>
+                              </div>
+                                  <!-- 3 -->
+                              <div class="dropdown__group">
+                                  <div class="dropdown__icon">
+                                    <img src="" alt="...">
+                                  </div>
+                              </div>
+                                  <!-- 4 -->
+                              <div class="dropdown__group">
+                                  <div class="dropdown__icon">
+                                     <img src="" alt="...">
+                                  </div>
+                              </div>
+                          </div>
+                          </div>
+                      </li> 
+                      <li id="menu" class="dropdown__item" class="choose">                      
+                        <a href="../index.html" class="choose"><span class="nav-title" style="color: #000000;">Sản phẩm khác</span></a>
+                        <div class="dropdown__container" style="background-color: mintcream;">
+                          <div class="dropdown__content">
+                            <div class="dropdown__group">
+                                <!-- 1 -->
+                                <div class="dropdown__icon">
+                                 <img src="" alt="...">
+                                </div>
+                            </div>
+                                <!-- 2 -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                  <img src="" alt="...">
+                                </div>
+                            </div>
+                                <!-- 3 -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                  <img src="" alt="...">
+                                </div>
+                            </div>
+                                <!-- 4 -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                   <img src="" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      </li> 
                   </ul>
+                </div>
                 </div>
               </div>
             </nav>
