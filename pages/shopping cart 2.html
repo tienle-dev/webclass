@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <title>Giỏ Hàng</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="https://petshopsaigon.vn/wp-content/themes/template/css/assets/icon-cart-2.png"
+        type="images/png">
+
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .gradient-custom {
+            background: beige;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .bg-image {
+            position: relative;
+        }
+
+        .bg-image img {
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .bg-image .mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .colorbutton{
+            background-color: beige; 
+            border-color: black; 
+            color: black;
+        }
+        .colorbutton:hover{
+            background-color: orange;
+            border-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5" style="border: none;">
+            <a class="navbar-brand" href="#!">Start Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Về chúng tôi</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cửa hàng</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#!">Tất cả sản phẩm</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Sản phẩm phổ biến</a></li>
+                            <li><a class="dropdown-item" href="#!">Sản phẩm mới</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-dark ms-2" type="button" data-bs-toggle="modal" data-bs-target="#userModal">
+                        Người dùng
+                    </button>
+                    <button class="btn btn-outline-dark ms-2" type="button" id="cartPopover" data-bs-toggle="popover" title="Giỏ hàng" data-bs-html="true">
+                        <i class="bi-cart-fill me-1"></i>
+                        Giỏ hàng
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="h-100 gradient-custom">
+        <div class="container py-5">
+            <a href="/" id="homeButton" style="text-decoration: none;"><button type="button" class="btn btn-light mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+              </svg> Trở về trang chủ</button></a>
+            <div class="row d-flex justify-content-center my-4">
+                <div class="col-md-8">
+                    <div class="card mb-4">
+                        <div class="card-header py-3">
+                            <h5 class="mb-0">Giỏ hàng - 2 sản phẩm</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Sản phẩm thứ nhất -->
+                            <div class="row product-row" data-price="17.99">
+                                <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                                    <!-- Hình ảnh -->
+                                    <div class="bg-image hover-overlay hover-zoom ripple rounded"
+                                        data-mdb-ripple-color="light">
+                                        <img src="assets/images/banhthuongchochovidautay.jpg"
+                                            class="w-100" alt="Blue Jeans Jacket" />
+                                        <a href="#!">
+                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                                        </a>
+                                    </div>
+                                    <!-- Hình ảnh -->
+                                </div>
+
+                                <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                                    <!-- Thông tin -->
+                                    <p><strong>Áo sơ mi denim xanh</strong></p>
+                                    <p>Màu: xanh</p>
+                                    <p>Size: M</p>
+                                    <button type="button" class="btn btn-primary btn-sm me-1 mb-2" id="removeProduct"
+                                        data-mdb-toggle="tooltip" title="Xóa sản phẩm">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"
+                                        title="Chuyển vào danh sách yêu thích">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <!-- Thông tin -->
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                                    <!-- Số lượng -->
+                                    <div class="d-flex mb-4" style="max-width: 300px">
+                                        <button class="btn btn-primary px-3 me-2"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+
+                                        <div class="form-outline">
+                                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                                                class="form-control" />
+                                            <label class="form-label" for="form1">Số lượng</label>
+                                        </div>
+
+                                        <button class="btn btn-primary px-3 ms-2"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <!-- Số lượng -->
+
+                                    <!-- Giá -->
+                                    <p class="text-start text-md-center">
+                                        <strong>$17.99</strong>
+                                    </p>
+                                    <!-- Giá -->
+                                </div>
+                            </div>
+                            <!-- Sản phẩm thứ nhất -->
+
+                            <hr class="my-4" />
+
+                            <!-- Sản phẩm thứ hai -->
+                            <div class="row product-row" data-price="17.99">
+                                <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                                    <!-- Hình ảnh -->
+                                    <div class="bg-image hover-overlay hover-zoom ripple rounded"
+                                        data-mdb-ripple-color="light">
+                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/13a.webp"
+                                            class="w-100" />
+                                        <a href="#!">
+                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                                        </a>
+                                    </div>
+                                    <!-- Hình ảnh -->
+                                </div>
+
+                                <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                                    <!-- Thông tin -->
+                                    <p><strong>Áo hoodie đỏ</strong></p>
+                                    <p>Màu: đỏ</p>
+                                    <p>Size: M</p>
+
+                                    <button type="button" class="btn btn-primary btn-sm me-1 mb-2" id="removeProduct"
+                                        data-mdb-toggle="tooltip" title="Xóa sản phẩm">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"
+                                        title="Chuyển vào danh sách yêu thích">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <!-- Thông tin -->
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                                    <!-- Số lượng -->
+                                    <div class="d-flex mb-4" style="max-width: 300px">
+                                        <button class="btn btn-primary px-3 me-2"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+
+                                        <div class="form-outline">
+                                            <input id="form2" min="0" name="quantity" value="1" type="number"
+                                                class="form-control" />
+                                            <label class="form-label" for="form2">Số lượng</label>
+                                        </div>
+
+                                        <button class="btn btn-primary px-3 ms-2"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <!-- Số lượng -->
+
+                                    <!-- Giá -->
+                                    <p class="text-start text-md-center">
+                                        <strong>$17.99</strong>
+                                    </p>
+                                    <!-- Giá -->
+                                </div>
+                            </div>
+                            <!-- Sản phẩm thứ hai -->
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p><strong>Dự kiến giao hàng</strong></p>
+                            <p id="deliveryDate"></p>
+                        </div>
+                    </div>
+                    <div class="card mb-4 mb-lg-0">
+                        <div class="card-body">
+                            <p><strong>Chúng tôi chấp nhận</strong></p>
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
+                                alt="Visa" />
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
+                                alt="American Express" />
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
+                                alt="Mastercard" />
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
+                                alt="PayPal acceptance mark" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-header py-3">
+                            <h5 class="mb-0">Tóm tắt</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                                    Tổng giá sản phẩm
+                                    <span class="product-total">$35.98</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                    Phí vận chuyển
+                                    <span>Gratis</span>
+                                </li>
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                                    <div>
+                                        <strong>Tổng cộng</strong>
+                                        <strong>
+                                            <p class="mb-0">(bao gồm VAT)</p>
+                                        </strong>
+                                    </div>
+                                    <strong><span class="cart-total">$35.98</span></strong>
+                                </li>
+                            </ul>
+                            
+
+                            <button type="button" class="btn colorbutton btn-lg btn-block">
+                                Tiến hành thanh toán
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Nút xóa sản phẩm trong giỏ hàng
+        document.querySelectorAll("#removeProduct").forEach(removeButton => {
+            removeButton.addEventListener("click", function () {
+                const productRow = this.parentElement.parentElement;
+                productRow.remove();
+                updateCartTotal();
+                updateCartItemCount();
+            });
+        });
+        
+
+        // Xác định ngày hiện tại
+        const currentDate = new Date();
+
+        // Tính ngày giao hàng dự kiến (thêm 2 ngày)
+        const deliveryDate = new Date();
+        deliveryDate.setDate(currentDate.getDate() + 2); // Thêm 2 ngày
+
+        // Xác định ngày sau 2 ngày
+        const twoDaysLater = new Date();
+        twoDaysLater.setDate(currentDate.getDate() + 3); // Thêm 3 ngày để hiển thị cả 2 ngày dự kiến giao hàng
+
+        const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+        const formattedDeliveryDate = deliveryDate.toLocaleDateString('vi-VN', options);
+        const formattedTwoDaysLater = twoDaysLater.toLocaleDateString('vi-VN', options);
+
+        // Hiển thị ngày dự kiến giao hàng trong phần tóm tắt
+        const deliveryDateElement = document.querySelector("#deliveryDate");
+        deliveryDateElement.textContent = `${formattedDeliveryDate} - ${formattedTwoDaysLater}`;
+
+
+    </script>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark" style="background-color: beige;">
+        <div class="container" style="border: none;"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Shop Homepage - Start Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <style>
+        dd {
+            font-family: Arial;
+            font-size: 17px;
+            padding: 25px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+            margin: 0 -16px;
+        }
+
+        .col-25 {
+            -ms-flex: 25%;
+            /* IE10 */
+            flex: 25%;
+        }
+
+        .col-50 {
+            -ms-flex: 50%;
+            /* IE10 */
+            flex: 50%;
+        }
+
+        .col-75 {
+            -ms-flex: 75%;
+            /* IE10 */
+            flex: 75%;
+        }
+
+        .col-25,
+        .col-50,
+        .col-75 {
+            padding: 20 16px;
+            border-radius: 10px;
+        }
+
+        .container {
+            border: 1px solid lightgrey;
+            border-radius: 10px;
+        }
+
+        input[type=text] {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .icon-container {
+            margin-bottom: 20px;
+            padding: 7px 0;
+            font-size: 24px;
+        }
+
+        a {
+            color: #2196F3;
+        }
+
+        hr {
+            border: 1px solid lightgrey;
+        }
+
+        span.price {
+            float: right;
+            color: grey;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+        @media (max-width: 800px) {
+            .row {
+                flex-direction: column-reverse;
+            }
+
+            .col-25 {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Center the "Continue to checkout" button */
+        .btn-continue {
+            display: block;
+            margin: auto;
+            width: 100%;
+            background-color: gray;
+            color: white;
+            padding: 14px 20px;
+            margin-bottom: 20px;
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .btn-continue:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5" style="border: none;">
+            <a class="navbar-brand" href="#!">Bắt đầu Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Về chúng tôi</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cửa hàng</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#!">Tất cả sản phẩm</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Sản phẩm cho chó</a></li>
+                            <li><a class="dropdown-item" href="#!">Sản phẩm cho mèo</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-dark ms-2" type="button" data-bs-toggle="modal" data-bs-target="#userModal">
+                        Người dùng
+                    </button>
+                    <button class="btn btn-outline-dark ms-2" type="button" id="cartPopover" data-bs-toggle="popover" title="Giỏ hàng" data-bs-html="true">
+                        <i class="bi-cart-fill me-1"></i>
+                        Giỏ hàng
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <dd>
+        <div class="row">
+            <div class="col-75">
+                <div class="container">
+                    <form action="/action_page.php" id="paymentForm" id="billingForm">
+                      
+                      <div class="row">
+                        <div class="col-50">
+                          <label for="addressOption">Chọn lựa địa chỉ:</label>
+                          <select id="addressOption" name="addressOption" onchange="toggleAddressFields()">
+                            <option value="newAddress">Nhập địa chỉ mới</option>
+                            <option value="accountAddress">Sử dụng địa chỉ tài khoản</option>
+                          </select>
+                        </div>
+                        <div class="col-50">
+                          <label for="paymentMethod">Chọn phương thức thanh toán:</label>
+                            <select id="paymentMethod" name="paymentMethod" onchange="togglePaymentFields()">
+                              <option value="creditCard">Thẻ tín dụng</option>
+                              <option value="cash">Tiền mặt</option>
+                            </select>
+                        </div>
+                      </div>
+    
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-50" id="newAddressFields">
+                                <h3><b>Địa chỉ thanh toán</b></h3>
+                                <label for="fname"><i class="fa fa-user"></i> Họ và tên</label>
+                                <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                <input type="text" id="email" name="email" placeholder="john@example.com">
+                                <label for="adr"><i class="fa fa-address-card-o"></i> Địa chỉ</label>
+                                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                <label for="city"><i class="fa fa-institution"></i> Thành phố</label>
+                                <input type="text" id="city" name="city" placeholder="New York">
+    
+                                
+                            </div>
+    
+                            <div class="col-50" id="creditCardFields">
+                                <h3><b>Thanh toán</b></h3>
+                                <label for="fname">Thẻ được chấp nhận</label>
+                                <div class="icon-container">
+                                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                </div>
+                                <label for="cname">Tên trên thẻ</label>
+                                <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                <label for="ccnum">Số thẻ tín dụng</label>
+                                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                <label for="expmonth">Tháng hết hạn</label>
+                                <input type="text" id="expmonth" name="expmonth" placeholder="Tháng 9">
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="expyear">Năm hết hạn</label>
+                                        <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="352">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label>
+                            <input type="checkbox"  name="sameadr"> Địa chỉ giao hàng giống với địa chỉ thanh toán
+                        </label>
+                        <label>
+                            <input type="checkbox"  name="sameadr"> Lưu thông tin này cho lần tiếp theo
+                        </label>
+                        <input type="submit" value="Tiếp tục thanh toán" class="btn-continue">
+                    </form>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="container">
+                    <br><h4><b>Giỏ hàng</b><span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+                    <p><a href="#">Sản phẩm 1</a> <span class="price">$15</span></p>
+                    <p><a href="#">Sản phẩm 2</a> <span class="price">$5</span></p>
+                    <p><a href="#">Sản phẩm 3</a> <span class="price">$8</span></p>
+                    <p><a href="#">Sản phẩm 4</a> <span class="price">$2</span></p>
+                    <hr>
+                    <p>Tổng cộng <span class="price" style="color:black"><b>$30</b></span></p>
+                </div>
+            </div>
+        </div>
+        <div class=" text-center mb-3" style="margin-top: 50px;">
+            <a href="#!" class="btn btn-primary btn-lg">Quay lại giỏ hàng</a>
+            <a href="#!" class="btn btn-secondary btn-lg">Quay lại trang chủ</a>
+        </div>
+    </dd>
+    
+    <script>
+      function togglePaymentFields() {
+          var paymentMethod = document.getElementById("paymentMethod").value;
+          var creditCardFields = document.getElementById("creditCardFields");
+
+          // Reset all fields
+          creditCardFields.style.display = "none";
+          // Hide all credit card fields
+
+          if (paymentMethod === "creditCard") {
+              creditCardFields.style.display = "";
+              // Show credit card fields if credit card is selected
+          }
+      }
+      function toggleAddressFields() {
+            var addressOption = document.getElementById("addressOption").value;
+            var newAddressFields = document.getElementById("newAddressFields");
+
+            // Reset all fields
+            
+
+            if (addressOption === "newAddress") {
+                newAddressFields.style.display = "";
+                document.getElementById("fname").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("adr").value = "";
+                document.getElementById("city").value = "";
+                document.getElementById("state").value = "";
+                document.getElementById("zip").value = "";
+                // Show new address fields if "Enter New Address" is selected
+            } else if (addressOption === "accountAddress") {
+                // If "Use Account Address" is selected, fill in example data
+                document.getElementById("fname").value = "John M. Doe";
+                document.getElementById("email").value = "john@example.com";
+                document.getElementById("adr").value = "542 W. 15th Street";
+                document.getElementById("city").value = "New York";
+                document.getElementById("state").value = "NY";
+                document.getElementById("zip").value = "10001";
+            }
+        }
+  </script>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark" style="background-color: beige;">
+        <div class="container" style="border: none;"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+    </footer>
+</body>
+
+</html>
