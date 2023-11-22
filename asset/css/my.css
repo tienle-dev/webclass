@@ -1,5 +1,21 @@
 /* ------------------------ header css ------------------------ */
 
+@font-face {
+   font-family: 'Ubuntu';
+   font-style: normal;
+   font-weight: 400;
+   src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKfw72.woff2) format('woff2');
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+   font-family: 'Ubuntu';
+   font-style: normal;
+   font-weight: 400;
+   src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKcQ72j00.woff2) format('woff2');
+   unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 .nav-title1 {
    font-size: 15px;
    font-weight: bold;
@@ -26,6 +42,10 @@
    list-style-type: none;  
    transition: 0.5s;
    /* width: 100%; */
+}
+
+.main-menu .row{
+   --bs-gutter-x: 0rem;
 }
 
 .container-fluid .row .col-md-2 img{
@@ -361,9 +381,16 @@
    display: grid;
 }
 
+.dropdown__inside{
+   font-family: 'Ubuntu', sans-serif;
+   color: saddlebrown;
+   font-weight: bold;
+   margin-top: 20px;
+}
+
 .dropdown__group {
    padding-left: 2.5rem;
-   row-gap: 0.5rem;
+   row-gap: 0rem;
 }
 
 .dropdown__group:first-child {
@@ -371,11 +398,11 @@
 }
 
 .dropdown__group:last-child {
-   margin-bottom: 1.25rem;
+   margin-bottom: 1rem;
 }
 
 .dropdown__group {
-   padding: 3rem 0 4rem 0;
+   padding: 3rem 0 5rem 0;
    align-content: baseline;
    row-gap: 0.5rem;
 }
@@ -395,7 +422,7 @@
 .dropdown__content {
    grid-template-columns: repeat(4, max-content);
    column-gap: 8rem;
-   max-width: 1120px;
+   max-width: 1100px;
    margin-inline: auto;
 }
 
@@ -417,6 +444,7 @@
 .dropdown__icon img {
    height: 96px;
    width: 120px;
+   margin-bottom: 10px;
 }
 
 .dropdown__icon img {
@@ -487,24 +515,24 @@ body{
    background-color: #f3f8ff;
 }
 #wrapper{
-outline: none;
-max-width: 1000px;
-margin: 30px auto;
+   outline: none;
+   max-width: 1000px;
+   margin: 30px auto;
 }
 .headline{
-text-align: center;
-margin: 35px 20px;
+   text-align: center;
+   margin: 35px 20px;
 }
 h2{
-padding-top: 2em;
-font-weight: 600;
-text-align: center;
+   padding-top: 2em;
+   font-weight: 600;
+   text-align: center;
    
 }
 h3{
    font-size: 30px;
    color: #111;
-   padding-top: 130px ;
+   padding-top: 70px ;
    text-transform: uppercase;
    /*border: 1px solid #bebebe;*/
    display: inline-block;
