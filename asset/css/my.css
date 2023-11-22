@@ -637,7 +637,7 @@ ul.products li .product-info .product-price{
     /* ---------------------- footer css ------------------------ */
 
 .footer-copyright {
-  border-top: 1px solid black;
+  border-top: 1px solid white;
 }
 
 .fa {
@@ -672,7 +672,7 @@ color: white;
 padding-bottom: 0.5rem !important;
 }
 .bg-beige{
-background-color: beige;
+background-color: white;
 }
 
 
