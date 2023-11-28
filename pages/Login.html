@@ -319,14 +319,59 @@
       </script> -->
     </header>
 
-    <div class="container">
-      <h1>Đăng nhập</h1>
-      <input type="email" placeholder="abc@gmail.com" />
-      <br />
-      <input type="password" placeholder="123456789" />
-      <br />
-      <button type="submit" id="sbmt">Đăng nhập</button>
-    </div>
+    <a href="../index.html" id="homeButton" style="text-decoration: none;"><button type="button" class="btn btn-light mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+    </svg> Trở về trang chủ</button></a>
+    <div class="containerlogin mt-3" style="margin:auto;">
+        
+      <div style="text-align: center;">
+        <h3 style="display: contents;">Đăng Nhập</h3>
+      </div>
+      <p class="text-center">Hãy nhập Email và Mật khẩu của bạn.</p>
+
+      <form action="/action_page.php">
+          <div class="mb-3 form-floating">
+              <input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ Email" name="email" required>
+              <label for="email">Email</label>
+              <div class="valid-feedback">Hợp lệ.</div>
+              <div class="invalid-feedback">Vui lòng điền trường này.</div>
+          </div>
+          <div class="mb-3 form-floating">
+              <input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu" name="pswd" required>
+              <label for="pwd">Mật khẩu</label>
+              <div class="form-check mb-3 mt-3">
+                  <input class="form-check-input" type="checkbox" id="showPwdCheckbox">
+                  <label class="form-check-label" for="showPwdCheckbox">Hiển thị mật khẩu</label>
+              </div>
+              <div class="valid-feedback" id="pwdValidFeedback" style="display: none;">Hợp lệ.</div>
+              <div class="invalid-feedback" id="pwdInvalidFeedback" style="display: none;">Vui lòng điền trường này.</div>
+              <div id="message" style="display:none; margin-top: 5px; color: red;"></div>
+          </div>
+          <div class="container" style="border: none; border-radius: 0; width:auto; border-top-style:groove; margin-bottom: -20px; "></div>
+          <div class="mb-3 mt-4 form-check">
+              <input type="checkbox" class="form-check-input" id="rememberMe">
+              <label class="form-check-label" for="rememberMe">Nhớ tôi</label>
+          </div>
+
+          <div class="mb-3 text-center">
+              <a href="/forgot-password" style="text-decoration-line: none;">Quên mật khẩu?</a>
+          </div>
+
+          <div class="text-center">
+              <button type="submit" class="btn btn-primary" id="submitBtn">Đăng nhập</button>
+          </div>
+          <br>
+          <div class=" text-center">
+              Bạn chưa có tài khoản? <a href="/register" style="text-decoration-line: none;">Đăng ký ngay</a>
+          </div>
+      </form>
+  </div>
+  <script>
+      document.getElementById("showPwdCheckbox").addEventListener("change", function () {
+          const pwdField = document.getElementById("pwd");
+          pwdField.type = this.checked ? "text" : "password";
+      });
+  </script>
     
 
                           <!-- Footer -->
