@@ -28,7 +28,7 @@
    font-size: 15px;
    font-weight: bold;
    padding: 0;
-   margin-right: 50px;
+   margin-right: 70px;
    position: relative;
    text-transform: uppercase;
    text-align: center;
@@ -46,6 +46,7 @@
 
 .main-menu .row{
    --bs-gutter-x: 0rem;
+   height: 60px;
 }
 
 .container-fluid .row .col-md-2 img{
@@ -61,19 +62,18 @@
    height: 40px;
 }
 
-.main-menu .row .col-lg-8{
-   margin-top: -20px;
-   margin-left: -35px;
+.main-menu .row .col-lg-9{
+   margin-top: -15px;
+   margin-left: -60px;
 }
 
-.col-lg-3{
+/* .col-lg-3{
    margin-top: 20px;
 }
 
 .col-lg-3 ul {
    list-style-type: none;
-}
-
+} */
 
 .nav-item a {
    margin-top: 5px;
@@ -153,75 +153,6 @@
 
 /*profile menu dropdown*/
 
-.sub-menu-wrap{
-   position: absolute;
-   top:68%;
-   right:5%;
-   width: 320px;
-   max-height: 0px;
-   overflow: hidden;
-   transition: max-height 0.5s;
-   z-index: 20;
-}
-
-.sub-menu-wrap .open-menu{
-   max-height: 400px;
-}
-
-.sub-menu{
-   border: 1px solid black;
-   background-color: #fff;
-   padding: 20px;
-   margin: 10px;
-}
-
-.sub-menu hr{
-   border: 0;
-   height: 1px;
-   width: 100%;
-   background-color: #ccc;
-   margin: 15px 0 10px;
-}
-
-.sub-menu-index-link{
-   display: flex;
-   align-items: center;
-   text-decoration: none;
-   color:#525252;
-   margin: 12px 0;
-}
-
-.sub-menu-index-link p{
-   width: 100%;
-}
-
-.sub-menu-index-link img{
-   width: 40px;
-   background-color: #e5e5e5;
-   border-radius: 50%;
-   padding: 8px;
-   margin-right: 15px;
-}
-
-.sub-menu-index-link span{
-   font-size: 20px;
-}
-
-.user-info{
-   display: flex;
-   align-items: center;
-}
-
-.user-info h2{
-   font-weight: 500;
-}
-
-.user-info img{
-   width:18%;
-   border-radius: 50%;
-   margin-right: 15px;
-}
-
 #header{
    width:100%;
    display: flex;
@@ -241,41 +172,6 @@
    margin-top: 20px;
 }
 
-#icons li{
-   padding-right: 20px;
-   font-size: 21px;
-   color: black;
-}
-.logo{
-   position: relative;
-   right:21%;
-   height: 96px;
-   width: 120px;
-}
-
-#mobile{
-   display: none;
-   align-items: center;
-}
-
-.active{
-   z-index:100;
-   width:300px;
-   position: relative;
-}
-
-.act-on{
-   z-index:100;
-   width:300px;
-   position: relative;
-}
-
-.choose {
-   z-index:100;
-   width:300px;
-   position: relative;
-}
-
 #menu li a.choose:hover::after {
    display: fixed;
    content: "";
@@ -289,50 +185,16 @@
    font-weight: 900;
 }
 
-#icons.active {
-   right: 0px;
+#icons li{
+   padding-right: 20px;
+   font-size: 21px;
+   color: black;
 }
 
-#icons li a i {
-   font-size: 26px;
-   color:black;
-}
-
-#icons li a span {
-   letter-spacing: 1.5px;
-   word-spacing: 1px;
-   font-size: 25px;
-   margin-right: 20px;
-   font-weight: 550;
-   color: var(--gl-color-black);
-}
-
-#icons li a.act-on::after{
-   content: "";
-   width: 20%;
-   height: 3px;
-   border-radius: 999px;
-   background-color: #ff8299;
-   position: absolute;
-   bottom: -8px;
-   left: 40%;
-   font-weight: 900;
-}
-
-.group {
-   margin-right: 20px;
-   display: flex;
-   margin-left: 10px;
+.choose {
+   z-index:100;
+   width:300px;
    position: relative;
-}
-
-.input {
-   width: 150px;
-   padding: 6px 0px 6px 40px;
-   border-radius: 18px;
-   border: 1.2px solid black;
-   outline: none;
-   opacity: 1;
 }
 
 /*----------*/
@@ -364,9 +226,10 @@
    z-index: 999;
    display: flex;
    justify-content: center;
-   height: max-content;
+   height: 400px;
+   width: 500px;
    position: absolute;
-   left: 0;
+   left: 180px;
    right: 0;
    top: 5.7rem;
    background-color: var(--body-color);
@@ -378,15 +241,9 @@
 }
 
 .dropdown__content, .dropdown__group {
-   display: grid;
+   display: block;
 }
 
-.dropdown__inside{
-   font-family: 'Ubuntu', sans-serif;
-   color: saddlebrown;
-   font-weight: bold;
-   margin-top: 20px;
-}
 
 .dropdown__group {
    padding-left: 2.5rem;
@@ -402,9 +259,8 @@
 }
 
 .dropdown__group {
-   padding: 3rem 0 5rem 0;
+   padding: 2rem 0 2rem 0;
    align-content: baseline;
-   row-gap: 0.5rem;
 }
 
 .dropdown__group:first-child, .dropdown__group:last-child {
@@ -420,37 +276,29 @@
 }
 
 .dropdown__content {
-   grid-template-columns: repeat(4, max-content);
-   column-gap: 8rem;
-   max-width: 1100px;
-   margin-inline: auto;
+   max-width: 500px;
+   display: block;
 }
 
 @media screen and (min-width: 1118px) {
 .dropdown__icon {
-   width: 60px;
-   height: 60px;
+   display: block;
+   margin-top: 20px;
+   width: 500px;
+   height: 10px;
    background-color: var(--first-color-lighten);
    border-radius: 50%;
-   display: grid;
    place-items: center;
-   margin-bottom: 1.1rem;
 }
 
-.dropdown__icon i {
-   font-size: 2rem;
+.dropdown__inside{
+   font-size: 18px;
+   font-family: 'Ubuntu', sans-serif;
+   color: saddlebrown;
+   font-weight: bold;
+}  
 }
 
-.dropdown__icon img {
-   height: 96px;
-   width: 120px;
-   margin-bottom: 10px;
-}
-
-.dropdown__icon img {
-   object-fit: contain;
-}   
-}
 
  /*-----------------*/
 
