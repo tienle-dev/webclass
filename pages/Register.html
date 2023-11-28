@@ -332,6 +332,12 @@
     <p class="text-center">Tham gia ngay để chia sẻ, kết nối và khám phá nhiều điều thú vị hơn!</p>
 
     <form action="/action_page.php">
+	<div class="mb-3">
+        <label for="email" class="form-label">Họ tên:</label>
+        <input type="text" class="form-control" id="name" placeholder="Nhập họ tên" name="name" required oninput="validateName()">
+        <div class="valid-feedback">Hợp lệ.</div>
+        <div class="invalid-feedback" id="name-error">Vui lòng không nhập các ký tự đặc biệt như ! @ # $ ...</div>
+      </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email:</label>
         <input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ Email" name="email" required>
@@ -449,6 +455,21 @@
       const confirmPwdField = document.getElementById("confirmPwd");
       confirmPwdField.type = this.checked ? "text" : "password";
     });
+	function validateName() { //Hàm kiểm tra ký tự đặc biệt trong phần nhập họ tên
+        var nameInput = document.getElementById('name');
+        var nameError = document.getElementById('name-error');
+        var pattern = /[A!#@?\$%&\*;\/\~=\-\+]/; // Danh sách ký tự đặc biệt cấm
+
+        if (pattern.test(nameInput.value)) {
+            // Có ký tự đặc biệt
+            nameInput.setCustomValidity('invalid');
+            nameError.style.display = 'block';
+        } else {
+            // Không có ký tự đặc biệt
+            nameInput.setCustomValidity('');
+            nameError.style.display = 'none';
+        }
+    };
   </script>
     
 
