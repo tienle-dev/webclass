@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../asset/css/my.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./../asset/images/pet-food-favicon.png" type="image/png" />
+    <link rel="stylesheet" href="./../asset/css/my.css" type="text/css" />
+    <link rel="stylesheet" href="./../asset/css/login.css" type="text/css" />
+    <title>petfood</title>
+    <style>
+        .cart-dropdown {
+            min-width: 400px;
+            /* Điều chỉnh kích thước theo mong muốn */
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            transform: translate(-50%, 0%);
+        }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            /* Màu nền của tiêu đề cố định */
+            z-index: 100;
+            /* Đảm bảo tiêu đề cố định hiển thị trên các phần khác */
+        }
+
+        .user-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .user-dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<div>
+    <a href="./index.html"><img width="100%" src="../asset/images/asd.webp"></a>
+</div>
+
+<body>
+    <header>
+        <div class="main-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2 py-3">
+                        <a href="./index.html">
+                            <img width="50%" src="../asset/images/1.png" class="img-fluid" alt="logo petfood">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm..."
+                                aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                            <span class="input-group-text" id="basic-addon2">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-3 py-2">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-3" id="col-3">
+                                        <div class="fs-3">
+                                            <i class="fa-solid fa-phone-volume"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-8" id="col-8">
+                                        Tư vấn hỗ trợ
+                                        <br />
+                                        <strong class="sdt">0869900147</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col user-dropdown">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="fs-3">
+                                            <i class="fa-solid fa-user"></i>
+                                            <div class="dropdown-content">
+                                                <a href="../index.html">Đăng xuất</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <a href="/pages/Login.html">
+                                            <span>Xin chào</span>
+                                            <br />
+                                            <strong class="login">Trần Quốc Bảo</strong>
+                                            <br />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-2 px-3">
+                        <div class="row">
+                            <div class="col">
+                                <a class="position-relative">
+                                    <span class="fs-3 text-black my-3">
+                                        <i class="fa-solid fa-cart-arrow-down"
+                                            style="margin-left: 30px; cursor: pointer;"></i>
+                                    </span>
+                                    <span>
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                            style="margin-top: -10px; margin-left: 3px">
+                                            0
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="position-relative">
+                                    <span class="fs-3 text-black my-3">
+                                        <i class="fa-solid fa-circle-user" style="margin-left: -25px;">
+                                        </i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-menu">
+            <!-- mobile menu -->
+            <!--  <div class="hidden-md" id="mobile-menu">
+					    <ul class="navmenu">
+    						<li>
+    							<div class="menutop">
+    								<h2><a href="#menu"> <i class="fas fa-align-justify"></i> " Danh mục sản phẩm " </a> </h2>
+    							</div>
+    							 <div class="m_search m_button">
+    								<i class="fa fa-search" aria-hidden="true"></i>
+    							</div> 
+    						</li>
+    					</ul>
+				          </div> -->
+            <!-- end mobile menu -->
+            <div class="row">
+                <!-- <div class="col-lg-3 text-black px-3 text-center sticky-top">
+            <ul>
+              <li id="menu" class="dropdown__item choose">
+                <a href="index.html" class="choose" aria-current="page"><span class="nav-title1"><i class="fa-solid fa-bars"></i> Danh mục sản phẩm</span></a>
+                <div class="dropdown__container" style="background-color: mintcream;">
+                  <div class="dropdown__content">
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                         <img src="" alt="...">
+                        </div>
+                    </div>
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                          <img src="" alt="...">
+                        </div>
+                    </div>
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                          <img src="" alt="...">
+                        </div>
+                    </div>
+                    <div class="dropdown__group">
+                        <div class="dropdown__icon">
+                           <img src="" alt="...">
+                        </div>
+                    </div>
+                </div>
+              </div>
+              </li>
+            </ul>
+          </div> -->
+                <div class="col-lg-2"></div>
+                <div class="col-lg-9">
+                    <nav class="navbar navbar-expand-lg text-center">
+                        <div class="container">
+                            <div class="collapse navbar-collapse" id="navbar">
+                                <ul class="navbar-nav">
+                                    <li id="menu" class="dropdown__item" class="choose">
+                                        <a href="../index.html" class="choose" aria-current="page"><span
+                                                class="nav-title">Trang chủ</span></a>
+                                    </li>
+                                    <li id="menu1" class="dropdown__item" class="choose1">
+                                        <a href="/pages/Dog Food1.html" class="choose"><span class="nav-title1"
+                                                style="color: #000000;">Thức
+                                                ăn cho chó</span></a>
+                                        <div class="dropdown__container" style="background-color: mintcream;">
+                                            <div class="dropdown__content">
+                                                <div class="dropdown__group">
+                                                    <!-- 1 -->
+                                                    <div class="dropdown__icon">
+
+                                                        <a href="/pages/Dry Dog Food.html">
+                                                            <span class="dropdown__inside">Thức ăn hạt khô cho
+                                                                chó</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- 2 -->
+                                                <div class="dropdown__group">
+                                                    <div class="dropdown__icon">
+                                                        <a href="/pages/Banh Dog Food.html">
+                                                            <span class="dropdown__inside">Bánh thưởng cho chó</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- 3 -->
+                                                <div class="dropdown__group">
+                                                    <div class="dropdown__icon">
+
+                                                        <a href="/pages/Pate Dog Food.html">
+                                                            <span class="dropdown__inside">Pate cho chó</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- 4 -->
+                                                <div class="dropdown__group">
+                                                    <div class="dropdown__icon">
+                                                        <a href="/pages/Sup Dog Food.html">
+                                                            <span class="dropdown__inside">Súp thưởng cho chó</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li id="menu2" class="dropdown-item" class="choose2">
+                                        <a href="/pages/Cat Food1.html" class="choose1"><span class="nav-title2"
+                                                style="color: #000000;">Thức ăn cho mèo</span></a>
+                                        <div class="dropdown-container" style="background-color: mintcream;">
+                                            <div class="dropdown-content">
+                                                <div class="dropdown-group">
+                                                    <!-- 1 -->
+                                                    <div class="dropdown-icon">
+
+                                                        <a href="/pages/Dry Cat Food.html">
+                                                            <span class="dropdown-inside">Thức ăn hạt khô cho mèo</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- 2 -->
+                                                <div class="dropdown-group">
+                                                    <div class="dropdown-icon">
+                                                        <a href="/pages/Banh Cat Food.html">
+                                                            <span class="dropdown-inside">Bánh thưởng cho mèo</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- 3 -->
+                                                <div class="dropdown-group">
+                                                    <div class="dropdown-icon">
+
+                                                        <a href="/pages/Pate Cat Food.html">
+                                                            <span class="dropdown-inside">Pate cho mèo</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- 4 -->
+                                                <div class="dropdown-group">
+                                                    <div class="dropdown-icon">
+                                                        <a href="/pages/Sup Cat Food.html">
+                                                            <span class="dropdown-inside">Súp thưởng cho mèo</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li id="menu3" class="dropdown--item" class="choose3">
+                                        <a href="../index.html" class="choose2"><span class="nav-title3"
+                                                style="color: #000000;">Sản phẩm
+                                                khác</span></a>
+                                        <div class="dropdown--container" style="background-color: mintcream;">
+                                            <div class="dropdown--content">
+                                                <!-- 1 -->
+                                                <div class="dropdown--group">
+                                                    <div class="dropdown--icon">
+                                                        <!-- <a href="#">
+                                    <img src="./asset/images/thuc-an-cho-cho-banner.jpg" alt="...">
+                                  </a> -->
+                                                        <a href="#">
+                                                            <span class="dropdown--inside">Thức ăn cho chó</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- 2 -->
+                                                <div class="dropdown--group">
+                                                    <div class="dropdown--icon">
+                                                        <!-- <a href="#">
+                                    <img src="./asset/images/thuc-an-cho-meo-banner.jpg" alt="...">
+                                  </a> -->
+                                                        <a href="#">
+                                                            <span class="dropdown--inside">Thức ăn cho mèo</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- 3 -->
+                                                <div class="dropdown--group">
+                                                    <div class="dropdown--icon">
+                                                        <!-- <a href="#">
+                                    <img src="./asset/images/cham-soc-cho-meo-banner.jpg" alt="...">
+                                  </a> -->
+                                                        <a href="#">
+                                                            <span class="dropdown--inside">Kiến thức chăm sóc</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- 4 -->
+                                                <div class="dropdown--group">
+                                                    <div class="dropdown--icon">
+                                                        <!-- <a href="#">
+                                    <img src="./asset/images/suc-khoe-cho-meo-banner.jpg" alt="...">
+                                  </a> -->
+                                                        <a href="#">
+                                                            <span class="dropdown--inside">Vấn đề sức khỏe</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+                </nav>
+            </div>
+        </div>
+        </div>
+        <script src="js/bootstrap.bubble.min.js"></script>
+        <script>
+            const header = document.querySelector(".main-header");
+            var menu = document.querySelector(".main-menu");
+            window.addEventListener("scroll", myFunction);
+
+            var temp;
+            function myFunction() {
+                temp = header.getBoundingClientRect().top + header.getBoundingClientRect().height;
+                if (temp <= 10) {
+                    menu.style.setProperty("position", "fixed");
+                    menu.style.setProperty("top", "0px");
+                    menu.style.setProperty("width", "100%");
+                    menu.style.setProperty("z-index", "9");
+                }
+                else {
+                    menu.style.removeProperty("position", "fixed");
+                    menu.style.removeProperty("top", "0px");
+                }
+            }
+        </script>
+    </header>
+
+    <!-- End of header -->
+    <!-- Tag này thêm vào để khỏi code nhầm -->
+    <!--body-->
+
+
+    <div id="wrapper">
+        <div class="headline">
+            <div style="margin-top: -30px;">
+                <h3>Pet Food - Thức ăn cho thú cưng chó mèo</h3>
+            </div>
+            <div class="banner">
+                <a href="/pages/Dog Food1.html">
+                    <img src="../asset/images/thuc-an-cho-cho-banner.jpg" width="80%">
+                </a>
+                <a href="/pages/Cat Food1.html">
+                    <img src="../asset/images/thuc-an-cho-meo-banner.jpg" width="80%">
+                </a>
+            </div>
+            <h3>Sản phẩm bán chạy</h3>
+        </div>
+
+        </ul>
+        <ul class="products">
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="/pages/banhthuongchochovidautay.html" class="product-thumb">
+                            <img src="../asset/images/thucanchocho/banhthuongchochovidautay.jpg" alt="hinh anh">
+                        </a>
+                        <a href="/pages/banhthuongchochovidautay.html" class="buynow">Mua ngay</a>
+
+                    </div>
+                    <div class="product-info">
+                        <a href="/pages/banhthuongchochovidautay.html" class="product-name">Bánh thưởng cho chó vị dâu
+                            tây JERHIGH
+                            Strawberry Sticks
+
+                        </a>
+                        <div class="product-price">55.000đ</div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="/pages/supchomeovicangu.html" class="product-thumb">
+                            <img src="../asset/images/thucanchomeo/supchomeovicanguvagai.jpg" alt="hinh anh">
+                        </a>
+                        <a href="/pages/supchomeovicangu.html" class="buynow">Mua ngay</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="/pages/supchomeovicangu.html" class="product-name">Súp cho mèo vị cá ngừ, cá mồi và
+                            gà</a>
+                        <div class="product-price">25.000đ</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="/pages/thucanchochoconcovua.html" class="product-thumb">
+                            <img src="../asset/images/thucanchocho/thucanchoconcovua.webp" alt="hinh anh">
+                        </a>
+                        <a href="/pages/thucanchochoconcovua.html" class="buynow">Mua ngay</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="/pages/thucanchochoconcovua.html" class="product-name">Thức ăn cho chó con cỡ vừa ROYAL
+                            CANIN </a>
+                        <div class="product-price">195.000đ</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="/pages/supthuongchochothomieng.html" class="product-thumb">
+                            <img src="../asset/images/thucanchocho/supthuongchochothommieng.png.jpg" alt="hinh anh">
+                        </a>
+                        <a href="/pages/supthuongchochothomieng.html" class="buynow">Mua ngay</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="/pages/supthuongchochothomieng.html" class="product-name">Súp thưởng cho chó thơm miệng
+                            INABA WANG
+                        </a>
+                        <div class="product-price">40.000đ</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="/pages/thucanchomeovithitga.html" class="product-thumb">
+                            <img src="../asset/images/thucanchomeo/thucanchomeoconvithitga.jpg" alt="hinh anh">
+                        </a>
+                        <a href="/pages/thucanchomeovithitga.html" class="buynow">Mua ngay</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="/pages/thucanchomeovithitga.html" class="product-name">Thức ăn cho mèo con vị thịt gà
+                            PURINA PRO
+                            PLAN Kitten</a>
+                        <div class="product-price">450.000Đ</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="/pages/banhthuongchomeovisodiep.html" class="product-thumb">
+                            <img src="../asset/images/thucanchomeo/snackbanhthuongvicangusodiepcathu.jpg"
+                                alt="hinh anh">
+                        </a>
+                        <a href="/pages/banhthuongchomeovisodiep.html" class="buynow">Mua ngay</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="/pages/banhthuongchomeovisodiep.html" class="product-name">Snack bánh thưởng cho mèo vị
+                            cá ngừ, sò
+                            điệp và cá mòi</a>
+                        <div class="product-price">200.000đ</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="/pages/patechochovithitbo.html" class="product-thumb">
+                            <img src="../asset/images/thucanchocho/patechochovithitbo.png" alt="hinh anh">
+                        </a>
+                        <a href="/pages/patechochovithitbo.html" class="buynow">Mua ngay</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="/pages/patechochovithitbo.html" class="product-name">Pate cho chó vị thịt bò IRIS
+                            OHYAMA </a>
+                        <div class="product-price">35.000đ</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="/pages/patechomeovicangu.html" class="product-thumb">
+                            <img src="../asset/images/thucanchomeo/patechomeovicangu.jpg  " alt="hinh anh">
+                        </a>
+                        <a href="/pages/patechomeovicangu.html" class="buynow">Mua ngay</a>
+                    </div>
+                    <div class="product-info">
+                        <a href="/pages/patechomeovicangu.html" class="product-name">Pate cho mèo vị cá ngừ CAT SEA FISH
+                        </a>
+                        <div class="product-price">30.000đ</div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- giỏ hàng -->
+    <section class="cart">
+        <i class="fas fa-times"></i>
+        <h2>GIỎ HÀNG</h2>
+        <form action="">
+            <table class="cart-container">
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Tên</th>
+                        <th>Giá</th>
+                        <th>SL</th>
+                        <th>Chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--<tr>
+            <td style="display: flex;align-items: center;"><img style="width: 70px" src="images/produc">
+            <td>
+              <p><span>320.000</span><sup>đ</sup></p>
+            </td>
+            <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+            <td style="cursor: pointer;">xóa</td>
+          </tr>-->
+                </tbody>
+            </table>
+            <div style="text-align: right;" class="total">
+                <p style="font-weight: bold;">Tổng tiền :<span class="total-amount">0
+                    </span><sup>đ</sup></p>
+            </div>
+            <button class="checkout-button">Chốt đơn</button>
+        </form>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cartShowBtn = document.querySelector(".fa-cart-arrow-down");
+            const cartCloseBtn = document.querySelector(".fa-times");
+            const cartContainer = document.querySelector(".cart");
+
+            cartShowBtn.addEventListener("click", function () {
+                cartContainer.style.right = "0";
+            });
+
+            cartCloseBtn.addEventListener("click", function () {
+                cartContainer.style.right = "-100%";
+            });
+
+            const buyNowButtons = document.querySelectorAll(".buynow");
+
+            // Lặp qua từng nút và thêm sự kiện click
+            buyNowButtons.forEach(function (button) {
+                button.addEventListener("click", function (event) {
+                    // Ngăn chặn hành vi mặc định của thẻ a (chuyển hướng trang)
+                    event.preventDefault();
+
+                    // Lấy thông tin sản phẩm từ phần tử chứa sản phẩm
+                    const productContainer = button.closest(".product-item");
+                    const productName = productContainer.querySelector(".product-name").textContent;
+                    const productPrice = productContainer.querySelector(".product-price").textContent;
+                    const productImg = productContainer.querySelector("img").src;
+
+                    // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+                    if (isProductInCart(productName)) {
+                        alert("Sản phẩm đã có trong giỏ hàng. Vui lòng kiểm tra giỏ hàng.");
+                        return;
+                    }
+
+                    // Tạo đối tượng sản phẩm
+                    const product = {
+                        name: productName,
+                        price: parseFloat(productPrice.replace("đ", "").replace(",", "")), // Chuyển giá thành số
+                        quantity: 1,
+                        img: productImg,
+                    };
+
+                    // Thêm sản phẩm vào giỏ hàng
+                    addToCart(product);
+                    // Hiển thị thông báo
+                    alert(`${productName} đã được thêm vào giỏ hàng thành công!`);
+                });
+            });
+
+            // Chức năng thêm sản phẩm vào giỏ hàng
+            function addToCart(product) {
+                // Lấy thông tin giỏ hàng từ localStorage
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+                const existingProductIndex = cart.findIndex((item) => item.name === product.name);
+
+                if (existingProductIndex !== -1) {
+                    // Nếu sản phẩm đã tồn tại, tăng số lượng
+                    cart[existingProductIndex].quantity += 1;
+                } else {
+                    // Nếu sản phẩm chưa tồn tại, thêm vào giỏ hàng
+                    cart.push(product);
+                }
+
+                // Lưu lại giỏ hàng vào localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+
+                // Cập nhật số lượng sản phẩm trên biểu tượng giỏ hàng
+                updateCartBadge(cart.length);
+
+                // Hiển thị thông tin sản phẩm trong giỏ hàng
+                displayProductInCart(product);
+            }
+
+            // Chức năng cập nhật số lượng sản phẩm trên biểu tượng giỏ hàng
+            function updateCartBadge(quantity) {
+                const cartBadge = document.querySelector(".badge");
+                if (cartBadge) {
+                    cartBadge.textContent = quantity;
+                }
+            }
+
+            // Chức năng hiển thị thông tin sản phẩm trong giỏ hàng
+            function displayProductInCart(product) {
+                // Lấy phần tử chứa thông tin giỏ hàng
+                const cartContainer = document.querySelector(".cart-container");
+
+                // Tạo phần tử cho sản phẩm mới
+                const productElement = document.createElement("tr");
+                productElement.innerHTML = `
+    <td><img style="width: 70px" src="${product.img}"></td>
+    <td>${product.name}</td>
+    <td>${product.price * 1000}<sup>đ</sup></td>
+    <td><input style="width: 30px; outline: none;" type="number" value="${product.quantity}" min="1"></td>
+    <td style="cursor: pointer;" class="remove-product">xóa</td>
+  `;
+
+                // Thêm sản phẩm vào giỏ hàng
+                cartContainer.appendChild(productElement);
+
+                // Bắt sự kiện xóa khi nút được click
+                const removeButton = productElement.querySelector(".remove-product");
+                removeButton.addEventListener("click", function () {
+                    // Gọi hàm để xóa sản phẩm khỏi giỏ hàng
+                    removeFromCart(product);
+                    // Xóa sản phẩm khỏi giao diện giỏ hàng
+                    cartContainer.removeChild(productElement);
+                    // Cập nhật tổng tiền
+                    updateTotal();
+                });
+                // Bắt sự kiện khi giá trị trên input thay đổi
+                const quantityInput = productElement.querySelector("input");
+                quantityInput.addEventListener("change", function () {
+                    // Gọi hàm để cập nhật số lượng sản phẩm trong giỏ hàng
+                    updateQuantity(product, quantityInput.value);
+
+                    // Cập nhật tổng tiền
+                    updateTotal();
+                });
+
+                // Cập nhật tổng tiền khi thêm sản phẩm mới
+                updateTotal();
+            }
+
+            // Chức năng xóa sản phẩm khỏi giỏ hàng
+            function removeFromCart(product) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                const existingProductIndex = cart.findIndex((item) => item.name === product.name);
+
+                if (existingProductIndex !== -1) {
+                    const currentQuantity = cart[existingProductIndex].quantity;
+
+                    // Trừ giá sản phẩm theo số lượng
+                    cart[existingProductIndex].price -= cart[existingProductIndex].price;
+                    cart[existingProductIndex].quantity -= cart[existingProductIndex].quantity;
+
+                    // Nếu số lượng = 1, xóa sản phẩm khỏi giỏ hàng
+                    cart.splice(existingProductIndex, 1);
+
+                    // Lưu lại giỏ hàng vào localStorage
+                    localStorage.setItem("cart", JSON.stringify(cart));
+
+                    // Cập nhật số lượng sản phẩm trên biểu tượng giỏ hàng
+                    updateCartBadge(cart.length);
+                }
+            }
+
+            function updateQuantity(product, newQuantity) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                const existingProductIndex = cart.findIndex((item) => item.name === product.name);
+
+                if (existingProductIndex !== -1) {
+                    // Đảm bảo giá trị mới là số nguyên lớn hơn 0
+                    const quantity = parseInt(newQuantity);
+                    if (quantity > 0) {
+                        cart[existingProductIndex].quantity = quantity;
+
+                        // Lưu lại giỏ hàng vào localStorage
+                        localStorage.setItem("cart", JSON.stringify(cart));
+
+                        // Cập nhật số lượng sản phẩm trên biểu tượng giỏ hàng
+                        updateCartBadge(cart.length);
+                    }
+                }
+            }
+            // Chức năng cập nhật tổng tiền
+            function updateTotal() {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                let totalAmount = 0;
+
+                // Tính tổng tiền
+                cart.forEach((product) => {
+                    totalAmount += product.price * product.quantity * 1000;
+                });
+
+                // Hiển thị tổng tiền trên giao diện
+                const totalAmountElement = document.querySelector(".total-amount");
+                if (totalAmountElement) {
+                    totalAmountElement.textContent = totalAmount.toLocaleString(); // Format số tiền
+                }
+            }
+
+
+            const checkoutButton = document.querySelector(".checkout-button");
+
+            // Bắt sự kiện click trên nút "Chốt đơn"
+            checkoutButton.addEventListener("click", function () {
+                // Lấy thông tin giỏ hàng từ localStorage
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                // Kiểm tra xem giỏ hàng có sản phẩm không
+                if (cart.length === 0) {
+                    alert("Giỏ hàng của bạn đang trống. Vui lòng thêm sản phẩm trước khi chốt đơn.");
+                    return;
+                }
+
+                // Gửi thông tin đơn hàng (cart) lên server hoặc xử lý theo yêu cầu của bạn
+                // Ở đây, chúng ta chỉ hiển thị thông báo đơn giản
+                alert("Đơn hàng của bạn đã được chốt thành công!");
+
+                // Sau khi chốt đơn, xóa thông tin giỏ hàng từ localStorage và cập nhật giao diện
+                localStorage.removeItem("cart");
+                updateCartBadge(0);
+                updateTotal();
+
+                // Đóng cửa sổ giỏ hàng (nếu muốn)
+                const cartContainer = document.querySelector(".cart");
+                cartContainer.style.right = "-100%";
+            });
+            // Chức năng kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+            function isProductInCart(productName) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                return cart.some((item) => item.name === productName);
+            }
+        })
+
+
+
+
+
+
+
+        // Thêm sản phẩm vào giỏ hàng
+        // Xử lý sự kiện click trên nút "Mua ngay" ở mỗi sản phẩm
+        // ...
+
+        // Xóa sản phẩm khỏi giỏ hàng
+        // Xử lý sự kiện click trên nút "xóa" trong giỏ hàng
+        // ...
+
+        // Cập nhật số lượng sản phẩm trong giỏ hàng
+        // Xử lý sự kiện click trên nút tăng/giảm số lượng sản phẩm
+        // ...
+
+        // Tính tổng tiền và cập nhật giao diện
+        // ...
+
+        // Chốt đơn
+        // Xử lý sự kiện click trên nút "Chốt đơn"
+        // ...
+
+    </script>
+
+
+    <!-- End of body -->
+    <!-- Tag này thêm vào để khỏi code nhầm -->
+    <div class="footer-container bottom p-5 mt-5 bg-beige text-dark">
+        <div class="row">
+            <div class="col-sm-4 p-3">
+                <h4><b>Về chúng tôi</b></h4>
+                <p><img src="https://th.bing.com/th/id/R.f87f60ae2ca3f01f1125f1de08f60d66?rik=nwYIciFDLmxj4A&riu=http%3a%2f%2fww1.prweb.com%2fprfiles%2f2017%2f07%2f10%2f14494582%2fPFX-Logo-Verticle.png&ehk=uTY1cynBYEXbTba8wRdUCYv5JDCPhk4hDTYIVyeav54%3d&risl=&pid=ImgRaw&r=0"
+                        alt="Hinh logo" width="50%"></p>
+                <p>Chào mừng bạn đến với PET FOOD - chuyên cung cấp đồ ăn thú cưng hàng đầu! Chúng tôi tập trung hoàn
+                    toàn
+                    vào việc cung cấp đồ ăn và thực phẩm dinh dưỡng tốt nhất cho thú cưng của bạn. Với sự cam kết về
+                    chất lượng và
+                    đa dạng, chúng tôi cung cấp các sản phẩm chất lượng cao để đảm bảo thú cưng của bạn được nuôi dưỡng
+                    một cách
+                    tốt nhất. Hãy đến với PET FOOD để tìm kiếm đủ loại thức ăn phong phú và chất lượng cho thú cưng của
+                    bạn.
+                </p>
+                <a><img src="https://theme.hstatic.net/1000290597/1001070684/14/footer_logobct_img.png?v=314"
+                        alt="hinh chung nhan"></a>
+
+                <a href="#" class="fa fa-facebook" style="border-width: 50px;"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+
+            </div>
+            <div class="col-sm-4 p-3">
+                <h4><b>Thông tin liên hệ</b></h4>
+                <p>
+                    <b>Địa chỉ</b>: 123 Đường XYZ, Thành phố ABC<br>
+                    <b>Số điện thoại</b>: 0996023491<br>
+                    <b>Email</b>: petfood@gmail.com<br>
+                    <br>Chúng tôi luôn sẵn sàng để hỗ trợ và đáp ứng mọi yêu cầu của bạn. Đừng ngần ngại liên hệ với
+                    chúng tôi để
+                    biết thêm thông tin hoặc để được tư vấn.
+                </p>
+            </div>
+            <div class="col-sm-3 p-3">
+                <h4><b>Hỗ trợ khách hàng</b></h4>
+                <p> <b>Hỗ Trợ 24/7</b>: Luôn sẵn sàng hỗ trợ bạn và thú cưng của bạn mọi lúc, mọi nơi.<br>
+                    <br>
+                    <b>Giao Hàng Nhanh Chóng</b>: Đảm bảo giao hàng nhanh chóng và an toàn đến cửa nhà của bạn.<br>
+                    <br>
+                    <b>Tư Vấn Chuyên Gia</b>: Đội ngũ tư vấn chuyên gia sẵn sàng hỗ trợ bạn trong việc chọn lựa thực
+                    phẩm phù
+                    hợp nhất.<br>
+                    <br>
+                    <b>Đổi/Trả Linh Hoạt</b>: Chính sách đổi/trả hàng linh hoạt để đảm bảo sự hài lòng của bạn.<br>
+                    <br>
+                    <b>Cộng Đồng Yêu Thú Cưng</b>: Một cộng đồng yêu thú cưng, nơi bạn không chỉ mua hàng mà còn học hỏi
+                    và
+                    chia sẻ.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <div class="text-center footer-copyright bg-beige bottom">
+        <div class="container">
+            <p></p>
+            <p>Copyright © 2023 <a href="https://nutrience.vn" style="color: orange ; text-decoration-line: none;"> PET
+                    FOOD
+                    &amp; Vietnam</a>.
+                <a target="_blank" href="https://www.haravan.com" style="color: orange ; text-decoration-line: none;"
+                    rel="noreferrer ">Powered by Haravan</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
