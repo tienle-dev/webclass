@@ -300,19 +300,19 @@
 }
 
 .choose {
-   z-index: 100;
+   
    width: 300px;
    position: relative;
 }
 
 .choose1 {
-   z-index: 100;
+   
    width: 300px;
    position: relative;
 }
 
 .choose2 {
-   z-index: 100;
+   
    width: 300px;
    position: relative;
 }
@@ -339,7 +339,7 @@
 }
 
 .cart table tr td {
-   border-bottom: 1px solid padding: 12px 0;
+   border-bottom: 1px solid padding 12px 0;
 }
 
 .cart table thead tr th:last-child {
@@ -928,7 +928,7 @@ ul.products {
 
 ul.products li {
    flex-basis: 25%;
-   padding-left: 15px;
+   padding-left: auto;
    padding-right: 15px;
    padding-top: 30px;
    box-sizing: border-box;
