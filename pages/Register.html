@@ -393,7 +393,7 @@
       </div>
 
       <div class="text-center">
-        <button type="submit" class="btn btn-primary" id="submitBtn">Gửi</button>
+        <button type="button" class="btn btn-primary" id="submitBtn">Gửi</button>
       </div>
     </form>
   </div>
@@ -487,7 +487,18 @@
       }
     };
   </script>
+  <script>
+    function move_login(){
+      const password = document.getElementById("pwd").value;
 
+      if (!password || password == ""){
+        alert("Xin them mat khau");
+      }
+      else{
+        location.assign("./../pages/Login.html");
+      }
+    }
+  </script>
 
   <!-- Footer -->
   <div class="footer-container bottom p-5 mt-5 bg-beige text-dark">
