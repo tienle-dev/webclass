@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <title>Trang Đăng ký</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+        background: linear-gradient(to right, #F5F5DC, #E6E6FA);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        border: 3px solid #ccc;
+        border-radius: 15px;
+        background: white;
+        padding: 20px;
+        width: 70%;
+        max-width: 400px;
+        /* Điều chỉnh kích thước tối đa của khung */
+        background-size: cover;
+        /* Đảm bảo màu nền không lặp lại */
+    }
+
+    #homeButton {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+</style>
+
+<body>
+    <a href="/" id="homeButton" style="text-decoration: none;"><button type="button" class="btn btn-light mb-3"><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+            </svg> Trở về trang chủ</button></a>
+    <div class="container mt-3">
+        <h3 class="text-center">Đăng ký</h3>
+        <p class="text-center">Tham gia ngay để chia sẻ, kết nối và khám phá nhiều điều thú vị hơn!</p>
+
+        <form action="/action_page.php">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ Email" name="email"
+                    required>
+                <div class="valid-feedback">Hợp lệ.</div>
+                <div class="invalid-feedback">Vui lòng điền trường này.</div>
+            </div>
+            <div class="mb-3">
+                <label for="pwd" class="form-label">Mật khẩu:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu" name="pswd" required>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="showPwdCheckbox">
+                    <label class="form-check-label" for="showPwdCheckbox">Hiển thị mật khẩu</label>
+                </div>
+                <div class="valid-feedback" id="pwdValidFeedback" style="display: none;">Hợp lệ.</div>
+                <div class="invalid-feedback" id="pwdInvalidFeedback" style="display: none;">Vui lòng điền trường này.
+                </div>
+                <div id="message" style="display:none; margin-top: 5px; color: red;"></div>
+            </div>
+            <div class="mb-3">
+                <label for="confirmPwd" class="form-label">Xác nhận mật khẩu:</label>
+                <input type="password" class="form-control" id="confirmPwd" placeholder="Xác nhận mật khẩu"
+                    name="confirmPswd" required>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="showConfirmPwdCheckbox">
+                    <label class="form-check-label" for="showConfirmPwdCheckbox">Hiển thị mật khẩu</label>
+                </div>
+                <div class="valid-feedback" id="confirmValidFeedback" style="display: none;">Hợp lệ.</div>
+                <div class="invalid-feedback">Vui lòng điền trường này.</div>
+            </div>
+            <div class="container" style="border: none; border-radius: 0; width:auto; border-top-style:groove; margin-bottom: -20px; "></div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
+                <label class="form-check-label" for="myCheck">Tôi đồng ý với điều khoản và điều kiện.</label>
+                <div class="valid-feedback">Hợp lệ.</div>
+                <div class="invalid-feedback">Hãy đánh dấu ô này để tiếp tục.</div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary" id="submitBtn">Gửi</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const lowerCaseLetters = /[a-z]/g;
+        const upperCaseLetters = /[A-Z]/g;
+        const numbers = /[0-9]/g;
+        const minLength = 8;
+
+        document.getElementById("pwd").addEventListener("input", function () {
+            const password = this.value;
+            const pwdValidFeedback = document.getElementById("pwdValidFeedback");
+            const pwdInvalidFeedback = document.getElementById("pwdInvalidFeedback");
+
+            let isValid = true;
+            let message = '';
+
+            if (!password.match(lowerCaseLetters)) {
+                isValid = false;
+                message += 'Mật khẩu phải chứa ít nhất một chữ cái viết thường. ';
+            }
+            if (!password.match(upperCaseLetters)) {
+                isValid = false;
+                message += 'Mật khẩu phải chứa ít nhất một chữ cái viết hoa. ';
+            }
+            if (!password.match(numbers)) {
+                isValid = false;
+                message += 'Mật khẩu phải chứa ít nhất một số. ';
+            }
+            if (password.length < minLength) {
+                isValid = false;
+                message += 'Mật khẩu phải có ít nhất 8 ký tự. ';
+            }
+
+            if (isValid) {
+                pwdValidFeedback.style.display = "block";
+                pwdInvalidFeedback.style.display = "none";
+                this.classList.remove("is-invalid");
+                this.classList.add("is-valid");
+            } else {
+                pwdValidFeedback.style.display = "none";
+                pwdInvalidFeedback.style.display = "block";
+                pwdInvalidFeedback.innerHTML = message;
+                this.classList.remove("is-valid");
+                this.classList.add("is-invalid");
+            }
+        });
+
+        document.getElementById("submitBtn").addEventListener("click", function (event) {
+            const password = document.getElementById("pwd").value;
+            const confirmPswd = document.getElementById("confirmPwd").value;
+            const message = document.getElementById("message");
+
+            let isValid = true;
+            message.innerHTML = '';
+
+            if (password !== confirmPswd) {
+                isValid = false;
+                message.innerHTML = 'Mật khẩu và xác nhận mật khẩu không khớp.';
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+                message.style.display = "block";
+            } else {
+                message.style.display = "none";
+            }
+        });
+        document.getElementById("showPwdCheckbox").addEventListener("change", function () {
+            const pwdField = document.getElementById("pwd");
+            pwdField.type = this.checked ? "text" : "password";
+        });
+        document.getElementById("showConfirmPwdCheckbox").addEventListener("change", function () {
+            const confirmPwdField = document.getElementById("confirmPwd");
+            confirmPwdField.type = this.checked ? "text" : "password";
+        });
+    </script>
+
+</body>
+
+</html>
