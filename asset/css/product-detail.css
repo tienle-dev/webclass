@@ -28,7 +28,7 @@ img {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    max-height: 300px;
+    height: auto;
 }
 
 .preview-thumbnail.nav-tabs {
