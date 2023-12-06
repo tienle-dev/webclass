@@ -365,7 +365,7 @@
       </div>
 
       <div class="text-center">
-        <button type="submit" class="btn btn-primary" id="submitBtn">Đăng nhập</button>
+        <button type="button" class="btn btn-primary" id="submitBtn">Đăng nhập</button>
       </div>
       <br>
       <div class=" text-center">
@@ -379,7 +379,18 @@
       pwdField.type = this.checked ? "text" : "password";
     });
   </script>
+  <script>
+    function move_login_success(){
+      const password = document.getElementById("pwd").value;
 
+      if (!password || password == ""){
+        alert("Xin them mat khau");
+      }
+      else{
+        location.assign("./../pages/Login success.html");
+      }
+    }
+  </script>
 
   <!-- Footer -->
   <div class="footer-container bottom p-5 mt-5 bg-beige text-dark">
